@@ -1,2 +1,2 @@
 # cyan-creation
-This is the portfolio of graphic design
+This is a portfolio of graphic design
