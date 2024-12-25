@@ -5551,7 +5551,7 @@ h4 {
   position: relative;
 }
 .nk-navbar {
-  padding: 33px 0;
+  padding: 20px 0 10px 0;
   font-size: 0.96rem;
   z-index: 1000;
   transition: background-color 0.3s;
