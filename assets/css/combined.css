@@ -6333,16 +6333,12 @@ h4 {
   height: 100%;
 }
 .nk-box-1 {
-
 }
 .nk-box-2 {
-
 }
 .nk-box-3 {
-
 }
 .nk-box-4 {
-
 }
 .nk-box-line:before {
   content: "";
@@ -6525,7 +6521,7 @@ blockquote.nk-blockquote-style-1 cite {
 .nk-carousel .flickity-slider > div {
   display: block;
   width: 100%;
-  padding: 17px 0;
+  padding: 3px 0;
 }
 .flickity-page-dots .dot {
   background: currentColor;

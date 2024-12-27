@@ -29,6 +29,37 @@
         max-width: 100% !important;
         margin: 0;
       }
+
+      /* Outer container of the carousel */
+      .custom-carousel-container {
+        width: 100%; /* Make it full width of the parent container */
+        overflow: hidden; /* Hide any overflow from the moving carousel */
+      }
+
+      /* Wrapper around the carousel to handle its width */
+      .custom-carousel-wrapper {
+        display: flex; /* Use flex to arrange items horizontally */
+        width: 100%; /* Full width */
+      }
+
+      /* This is the carousel itself, holding all items */
+      .custom-carousel {
+        display: flex;
+        transition: transform 20s linear; /* Smooth transition when sliding */
+      }
+
+      /* Each carousel item */
+      .custom-carousel-item {
+        flex: 0 0 20%; /* Ensures 5 images are visible at once, 100% / 5 = 20% width each */
+        padding: 3px 1px ; /* Optional: Add padding to space out images */
+      }
+
+      /* Image inside each carousel item */
+      .custom-carousel-img {
+        width: 100%; /* Ensure image takes up full item width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure images are cropped if necessary */
+      }
     </style>
 
     <!-- END: Styles -->
@@ -178,71 +209,50 @@
 
       <!-- START: Partners -->
       <div class="bg-white">
-        <div class="container">
-          <div class="nk-carousel-2 nk-carousel-x4 nk-carousel-no-margin nk-carousel-all-visible">
-            <div class="nk-carousel-inner">
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/services/book-covers.jpg" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
+        <div class="custom-carousel-container">
+          <div class="custom-carousel-wrapper">
+            <div class="custom-carousel">
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 1.jpg"
+                  alt="Book Covers"
+                  class="custom-carousel-img" />
               </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/services/baner.jpg" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 2.jpg" alt="Banner" class="custom-carousel-img" />
               </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/services/college.jpg" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 3.jpg" alt="College" class="custom-carousel-img" />
               </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/services/handbill.jpg" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 4.jpg" alt="Handbill" class="custom-carousel-img" />
               </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/services/invitation.jpg" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 5.jpg"
+                  alt="Invitation"
+                  class="custom-carousel-img" />
               </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/services/logoes.jpg" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 6.jpg" alt="Logos" class="custom-carousel-img" />
               </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/services/photo-enhance.jpg" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 7.jpg"
+                  alt="Photo Enhance"
+                  class="custom-carousel-img" />
               </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/services/social-meadia-flyers.jpg" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 8.jpg"
+                  alt="Social Media Flyers"
+                  class="custom-carousel-img" />
               </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/services/youtube-thumbnail.jpg" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 9.jpg"
+                  alt="YouTube Thumbnail"
+                  class="custom-carousel-img" />
               </div>
             </div>
           </div>
@@ -665,6 +675,32 @@
         } else {
           content.style.display = "none"; // Hide the content
         }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".custom-carousel");
+        const carouselWrapper = document.querySelector(".custom-carousel-wrapper");
+        const totalWidth = carousel.scrollWidth; // Get the total width of the carousel
+
+        // Function to move the carousel
+        function moveCarousel() {
+          carousel.style.transform = "translateX(-" + totalWidth + "px)"; // Move carousel to the left
+        }
+
+        // Initially move the carousel
+        moveCarousel();
+
+        // After the transition ends, reset the position and start over
+        carousel.addEventListener("transitionend", function () {
+          carousel.style.transition = "none"; // Disable transition temporarily
+          carousel.style.transform = "translateX(0)"; // Reset the position to the start
+          setTimeout(function () {
+            carousel.style.transition = "transform 20s linear"; // Re-enable transition
+            moveCarousel(); // Start the animation again
+          }, 50); // Small delay to ensure smooth reset
+        });
       });
     </script>
 
