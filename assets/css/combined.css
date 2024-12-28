@@ -6104,6 +6104,9 @@ h4 {
 .nk-footer .nk-footer-text {
   font-size: 0.95rem;
 }
+.nk-footer .nk-footer-text a {
+  text-decoration: none;
+}
 .nk-widget {
   overflow: hidden;
 }
@@ -8016,4 +8019,40 @@ a:hover > .nk-icon-search:after {
 .nano:hover > .nano-pane {
   visibility: visible\9;
   opacity: 0.99;
+}
+
+.about {
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+.about .title {
+  text-align: center;
+  padding-top: 40px;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+}
+
+.about .content {
+  padding-top: 40px;
+}
+
+.about .content h4 {
+  display: inline-block;
+  padding: 5px 30px 5px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+}
+
+.about .content p {
+  font-size: 18px;
+  text-align: justify;
+  font-weight: bold;
+  font-family: sans-serif;
 }
