@@ -22,6 +22,10 @@
       rel="stylesheet"
       type="text/css" />
 
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet" />
+
     <link rel="stylesheet" href="assets/css/combined.css" />
 
     <style>
@@ -59,6 +63,34 @@
         width: 100%; /* Ensure image takes up full item width */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover; /* Ensure images are cropped if necessary */
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        border-radius: 50%;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .whatsapp-float:hover {
+        background-color: #189c48;
+      }
+
+      .whatsapp-float a {
+        font-size: 32px;
+        color: white;
+      }
+
+      .whatsapp-float a:hover {
+        color: white;
       }
     </style>
 
@@ -555,7 +587,8 @@
 
             <ul class="nk-contact-info">
               <li>
-                <strong>Facebook :</strong><a href="https://www.facebook.com" target="_blank">Cyan Creation</a>
+                <strong>Facebook :</strong
+                ><a href="https://www.facebook.com" target="_blank">Cyan Creation</a>
               </li>
               <li>
                 <strong>Instergram :</strong>
@@ -564,7 +597,7 @@
               <li><strong>Email:</strong> <a href="mailto:cyan@gmail.com">cyan@gmail.com</a></li>
               <li>
                 <strong>WhatsApp No:</strong>
-                <a href="https://wa.me/944953634" target="_blank">+94 495 3634</a>
+                <a href="https://wa.me/+94784953634" target="_blank">+94 495 3634</a>
               </li>
             </ul>
             <!-- END: Info -->
@@ -602,6 +635,12 @@
         <div class="nk-gap-2"></div>
       </div>
       <!-- END: Contact Info -->
+
+      <div class="whatsapp-float">
+        <a href="https://wa.me/+94784953634" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
 
       <!--
     START: Footer
