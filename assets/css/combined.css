@@ -6378,7 +6378,6 @@ h4 {
 .nk-pagination {
   width: 100%;
   background-color: #fff;
-  padding: 20px 0;
 }
 .nk-pagination.nk-pagination-nobg {
   background-color: transparent;
@@ -7607,6 +7606,12 @@ a:hover > .nk-icon-search:after {
 }
 .nk-blog-isotope .nk-blog-post .nk-post-thumb > a:hover {
   opacity: 0.6;
+}
+.nk-blog-isotope .nk-blog-post .nk-post-thumb .btn-blog-post {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
 }
 .nk-blog-isotope .nk-blog-post .nk-post-category a {
   display: inline-block;
