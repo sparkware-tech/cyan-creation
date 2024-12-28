@@ -8024,7 +8024,7 @@ a:hover > .nk-icon-search:after {
 .about {
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 85vh;
 }
 
 .about .title {
@@ -8037,7 +8037,7 @@ a:hover > .nk-icon-search:after {
 }
 
 .about .content {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .about .content h4 {
