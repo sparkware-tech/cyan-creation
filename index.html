@@ -24,6 +24,44 @@
 
     <link rel="stylesheet" href="assets/css/combined.css" />
 
+    <style>
+      .modal-dialog {
+        max-width: 100% !important;
+        margin: 0;
+      }
+
+      /* Outer container of the carousel */
+      .custom-carousel-container {
+        width: 100%; /* Make it full width of the parent container */
+        overflow: hidden; /* Hide any overflow from the moving carousel */
+      }
+
+      /* Wrapper around the carousel to handle its width */
+      .custom-carousel-wrapper {
+        display: flex; /* Use flex to arrange items horizontally */
+        width: 100%; /* Full width */
+      }
+
+      /* This is the carousel itself, holding all items */
+      .custom-carousel {
+        display: flex;
+        transition: transform 5s linear; /* Smooth transition when sliding */
+      }
+
+      /* Each carousel item */
+      .custom-carousel-item {
+        flex: 0 0 20%; /* Ensures 5 images are visible at once, 100% / 5 = 20% width each */
+        padding: 3px 1px; /* Optional: Add padding to space out images */
+      }
+
+      /* Image inside each carousel item */
+      .custom-carousel-img {
+        width: 100%; /* Ensure image takes up full item width */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure images are cropped if necessary */
+      }
+    </style>
+
     <!-- END: Styles -->
   </head>
 
@@ -45,10 +83,10 @@
                 <a href="index.html#about">About</a>
               </li>
               <li>
-                <a href="index.html#contact">Contact</a>
+                <a href="index.html#portfolio">Portfolio</a>
               </li>
               <li>
-                <a href="portfolio.html">Portfolio</a>
+                <a href="index.html#contact">Contact</a>
               </li>
             </ul>
 
@@ -140,11 +178,9 @@
           <div class="nk-header-table-cell">
             <div class="container">
               <div class="nk-header-table-cell-logo">
-                <img src="assets/images/logo_bloom.gif" alt="logo_home" width="50%"/>
-                <img src="assets/images/tag.png" alt="tag" width="70%"/>
+                <img src="assets/images/logo_bloom.gif" alt="logo_home" width="50%" />
+                <img src="assets/images/tag.png" alt="tag" width="70%" />
               </div>
-
-            
 
               <div class="nk-gap"></div>
               <div class="nk-header-text text-white">
@@ -167,28 +203,62 @@
 
       <!-- START: About Our Agency -->
       <div class="bg-white" id="about">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2 text-xs-center">
-              <div class="nk-gap-4 mt-9"></div>
+        <img src="assets/images/about.jpg" width="100%" />
+      </div>
+      <!-- END: About Our Agency -->
 
-              <h2 class="display-4">About Our Agency</h2>
-              <div class="nk-gap mnt-5"></div>
-
-              <p>
-                We are a new design studio based in USA. We have over 20 years of combined experience, and
-                know a thing or two about designing websites and mobile apps. Clever use of technology and
-                lean processes enable us to work faster and smarter.
-              </p>
-
-              <img src="assets/images/about-me-signature.png" alt="" class="nk-img-fit" />
-
-              <div class="nk-gap-4 mt-25"></div>
+      <!-- START: Partners -->
+      <div class="bg-white">
+        <div class="custom-carousel-container">
+          <div class="custom-carousel-wrapper">
+            <div class="custom-carousel">
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 1.jpg"
+                  alt="Book Covers"
+                  class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 2.jpg" alt="Banner" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 3.jpg" alt="College" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 4.jpg" alt="Handbill" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 5.jpg"
+                  alt="Invitation"
+                  class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 6.jpg" alt="Logos" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 7.jpg"
+                  alt="Photo Enhance"
+                  class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 8.jpg"
+                  alt="Social Media Flyers"
+                  class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 9.jpg"
+                  alt="YouTube Thumbnail"
+                  class="custom-carousel-img" />
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- END: About Our Agency -->
+      <!-- END: Partners -->
 
       <!-- START: Features -->
       <div class="nk-box bg-dark-1 text-white">
@@ -248,294 +318,101 @@
       </div>
       <!-- END: Features -->
 
-      <!-- START: Portfolio -->
-      <div class="nk-box bg-white" id="projects">
-        <div class="nk-gap-4 mt-5"></div>
-
-        <h2 class="text-xs-center display-4">Best Projects</h2>
-
-        <div class="nk-gap mnt-6"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-              <div class="text-xs-center">
-                Donec orci sem, pretium ac dolor et, faucibus faucibus mauris. Etiam,pellentesque faucibus.
-                Vestibulum gravida volutpat ipsum non ultrices.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="nk-gap-2 mt-12"></div>
-        <div class="container">
-          <div class="nk-portfolio-list nk-isotope nk-isotope-3-cols">
-            <div class="nk-isotope-item" data-filter="Mockup">
-              <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
-                <a href="portfolio-single.html" class="nk-portfolio-item-link"></a>
-                <div class="nk-portfolio-item-image">
-                  <div style="background-image: url('assets/images/portfolio-7-sm.jpg')"></div>
-                </div>
-                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center">
-                  <div>
-                    <h2 class="portfolio-item-title h3">Vinyl Record</h2>
-                    <div class="portfolio-item-category">Mockup</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="nk-isotope-item" data-filter="Print">
-              <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
-                <a href="portfolio-single.html" class="nk-portfolio-item-link"></a>
-                <div class="nk-portfolio-item-image">
-                  <div style="background-image: url('assets/images/portfolio-4-sm.jpg')"></div>
-                </div>
-                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center">
-                  <div>
-                    <h2 class="portfolio-item-title h3">Modern T-Shirt</h2>
-                    <div class="portfolio-item-category">Print</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="nk-isotope-item" data-filter="Branding">
-              <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
-                <a href="portfolio-single.html" class="nk-portfolio-item-link"></a>
-                <div class="nk-portfolio-item-image">
-                  <div style="background-image: url('assets/images/portfolio-5-sm.jpg')"></div>
-                </div>
-                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center">
-                  <div>
-                    <h2 class="portfolio-item-title h3">Minimal Bag</h2>
-                    <div class="portfolio-item-category">Branding</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="nk-isotope-item" data-filter="Design">
-              <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
-                <a href="portfolio-single.html" class="nk-portfolio-item-link"></a>
-                <div class="nk-portfolio-item-image">
-                  <div style="background-image: url('assets/images/portfolio-9-sm.jpg')"></div>
-                </div>
-                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center">
-                  <div>
-                    <h2 class="portfolio-item-title h3">Clean &amp; Groovy</h2>
-                    <div class="portfolio-item-category">Design</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="nk-isotope-item" data-filter="Design">
-              <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
-                <a href="portfolio-single.html" class="nk-portfolio-item-link"></a>
-                <div class="nk-portfolio-item-image">
-                  <div style="background-image: url('assets/images/portfolio-3-sm.jpg')"></div>
-                </div>
-                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center">
-                  <div>
-                    <h2 class="portfolio-item-title h3">Minimal Mobile App</h2>
-                    <div class="portfolio-item-category">Design</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="nk-isotope-item" data-filter="Print">
-              <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
-                <a href="portfolio-single.html" class="nk-portfolio-item-link"></a>
-                <div class="nk-portfolio-item-image">
-                  <div style="background-image: url('assets/images/portfolio-8-sm.jpg')"></div>
-                </div>
-                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center">
-                  <div>
-                    <h2 class="portfolio-item-title h3">White T-Shirt</h2>
-                    <div class="portfolio-item-category">Print</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="nk-isotope-item" data-filter="Branding">
-              <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
-                <a href="portfolio-single.html" class="nk-portfolio-item-link"></a>
-                <div class="nk-portfolio-item-image">
-                  <div style="background-image: url('assets/images/portfolio-2-sm.jpg')"></div>
-                </div>
-                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center">
-                  <div>
-                    <h2 class="portfolio-item-title h3">Business Card</h2>
-                    <div class="portfolio-item-category">Branding</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="nk-isotope-item" data-filter="Photography">
-              <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
-                <a href="portfolio-single.html" class="nk-portfolio-item-link"></a>
-                <div class="nk-portfolio-item-image">
-                  <div style="background-image: url('assets/images/portfolio-6-sm.jpg')"></div>
-                </div>
-                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center">
-                  <div>
-                    <h2 class="portfolio-item-title h3">Heja Stockholm</h2>
-                    <div class="portfolio-item-category">Photography</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="nk-isotope-item" data-filter="Photography">
-              <div class="nk-portfolio-item nk-portfolio-item-square nk-portfolio-item-info-style-1">
-                <a href="portfolio-single.html" class="nk-portfolio-item-link"></a>
-                <div class="nk-portfolio-item-image">
-                  <div style="background-image: url('assets/images/portfolio-12-sm.jpg')"></div>
-                </div>
-                <div class="nk-portfolio-item-info nk-portfolio-item-info-center text-xs-center">
-                  <div>
-                    <h2 class="portfolio-item-title h3">Paper Bag</h2>
-                    <div class="portfolio-item-category">Photography</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nk-gap-4 mt-15"></div>
-      </div>
-      <!-- END: Portfolio -->
-
-      <!-- START: Reviews -->
-      <div class="nk-box bg-dark-1">
-        <div
-          class="bg-image bg-image-parallax"
-          style="background-image: url('assets/images/bg-pattern.jpg')"></div>
-        <div class="nk-gap-5 mnt-6"></div>
-        <div class="nk-gap-3"></div>
-        <div class="container-fluid">
-          <!-- START: Carousel -->
-          <div class="nk-carousel nk-carousel-all-visible text-white" data-autoplay="18000" data-dots="true">
-            <div class="nk-carousel-inner">
-              <div>
-                <div>
-                  <blockquote class="nk-blockquote-style-1 text-white">
-                    <p>
-                      Outstanding job and exceeded all expectations. It was a pleasure to work with them on a
-                      sizable first project and am looking forward to start the next one asap.
-                    </p>
-                    <cite>Michael Hopkins</cite>
-                  </blockquote>
-                  <div class="nk-gap-3 mt-10"></div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <blockquote class="nk-blockquote-style-1 text-white">
-                    <p>
-                      Outstanding job and exceeded all expectations. It was a pleasure to work with them on a
-                      sizable first project and am looking forward to start the next one asap.
-                    </p>
-                    <cite>Michael Hopkins</cite>
-                  </blockquote>
-                  <div class="nk-gap-3 mt-10"></div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <blockquote class="nk-blockquote-style-1 text-white">
-                    <p>
-                      Outstanding job and exceeded all expectations. It was a pleasure to work with them on a
-                      sizable first project and am looking forward to start the next one asap.
-                    </p>
-                    <cite>Michael Hopkins</cite>
-                  </blockquote>
-                  <div class="nk-gap-3 mt-10"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- END: Carousel -->
-        </div>
-        <div class="nk-gap-4 mt-3"></div>
-      </div>
-      <!-- END: Reviews -->
-
-      <!-- START: Partners -->
-      <div class="bg-white">
-        <div class="container">
-          <div class="nk-carousel-2 nk-carousel-x4 nk-carousel-no-margin nk-carousel-all-visible">
-            <div class="nk-carousel-inner">
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/partner-logo-1-dark.png" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/partner-logo-2-dark.png" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/partner-logo-3-dark.png" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/partner-logo-4-dark.png" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/partner-logo-5-dark.png" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/partner-logo-6-dark.png" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/partner-logo-7-dark.png" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div>
-                  <div class="nk-box-1">
-                    <img src="assets/images/partner-logo-8-dark.png" alt="" class="nk-img-fit" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END: Partners -->
-
       <!-- START: Blog -->
-      <div class="nk-box bg-gray-1" id="blog">
+      <div class="nk-box bg-gray-1" id="portfolio">
         <div class="nk-gap-4 mt-5"></div>
 
-        <h2 class="text-xs-center display-4">Latest Blog</h2>
+        <h2 class="text-xs-center display-4">Portfolio</h2>
+
+        <div class="container">
+          <!-- START: Filter -->
+          <div class="nk-pagination nk-pagination-nobg nk-pagination-center">
+            <a href="#nk-toggle-filter" id="toggleButton">
+              <span class="nk-icon-squares"></span>
+            </a>
+          </div>
+        </div>
+
+        <div id="toggleContent" style="display: none">
+          <div class="container mt-40">
+            <div class="row">
+              <div class="col-lg-12">
+                <img src="assets/images/portfolio/cover.jpg" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-10">
+            <div class="row">
+              <div class="col-lg-12">
+                <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-10">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="assets/images/portfolio/shirt-1.jpg" alt="" width="100%" />
+              </div>
+              <div class="col-lg-6">
+                <img src="assets/images/portfolio/shirt-2.jpg" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-10">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="assets/images/portfolio/contact.jpg" alt="" width="100%" />
+              </div>
+              <div class="col-lg-6">
+                <img src="assets/images/portfolio/wallpaper.jpg" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-10">
+            <div class="row">
+              <div class="col-lg-12">
+                <img src="assets/images/portfolio/baner.jpg" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-10">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="assets/images/portfolio/book-cover.jpg" alt="" width="100%" />
+              </div>
+              <div class="col-lg-6">
+                <img src="assets/images/portfolio/bag-cover.jpg" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-10">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="assets/images/portfolio/baner-2.jpg" alt="" width="100%" />
+              </div>
+              <div class="col-lg-6">
+                <img src="assets/images/portfolio/stiker.jpg" alt="" width="100%" />
+                <img src="assets/images/portfolio/card.jpg" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container mt-10">
+            <div class="row">
+              <div class="col-lg-12">
+                <img src="assets/images/portfolio/thank-cover.jpg" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+
+          <div class="nk-gap-2 mt-12"></div>
+        </div>
 
         <div class="nk-gap mnt-6"></div>
         <div class="container">
@@ -561,22 +438,10 @@
                   <div class="pl-15 pr-15">
                     <div class="nk-blog-post">
                       <div class="nk-post-thumb">
-                        <a href="blog-single.html">
+                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
                           <img src="assets/images/post-1-mid.jpg" alt="" class="nk-img-stretch" />
-                        </a>
-                        <div class="nk-post-category"><a href="#">Nature</a></div>
-                      </div>
-                      <h2 class="nk-post-title h4">
-                        <a href="blog-single.html">Something I need to tell you</a>
-                      </h2>
-
-                      <div class="nk-post-date">September 18, 2016</div>
-
-                      <div class="nk-post-text">
-                        <p>
-                          That female isn't midst divide kind upon seas lights greater green creature lights
-                          brought.
-                        </p>
+                        </button>
+                        <div class="nk-post-category"><a href="#">Cover</a></div>
                       </div>
                     </div>
                   </div>
@@ -589,20 +454,10 @@
                   <div class="pl-15 pr-15">
                     <div class="nk-blog-post">
                       <div class="nk-post-thumb">
-                        <a href="blog-single.html">
+                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
                           <img src="assets/images/post-3-mid.jpg" alt="" class="nk-img-stretch" />
-                        </a>
-                        <div class="nk-post-category"><a href="#">Nature</a></div>
-                      </div>
-                      <h2 class="nk-post-title h4"><a href="blog-single.html">The History of Nature</a></h2>
-
-                      <div class="nk-post-date">August 27, 2016</div>
-
-                      <div class="nk-post-text">
-                        <p>
-                          Third is fly. From one under in itself two waters, all own. Said male shall greater
-                          own grass.
-                        </p>
+                        </button>
+                        <div class="nk-post-category"><a href="#">Social meadia</a></div>
                       </div>
                     </div>
                   </div>
@@ -615,23 +470,11 @@
                   <div class="pl-15 pr-15">
                     <div class="nk-blog-post">
                       <div class="nk-post-thumb">
-                        <a href="blog-single.html">
+                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
                           <img src="assets/images/post-4-mid.jpg" alt="" class="nk-img-stretch" />
-                        </a>
+                        </button>
                         <div class="nk-post-category"><a href="#">Branding</a></div>
                       </div>
-                      <h2 class="nk-post-title h4">
-                        <a href="blog-single.html">Are you doing the Right Way?</a>
-                      </h2>
-
-                      <div class="nk-post-date">August 14, 2016</div>
-
-                      <div class="nk-post-text">
-                        <p>
-                          Which all, morning isn't. Female and own living dry, and morning lesser first he
-                          stars under years thing.
-                        </p>
-                      </div>
                     </div>
                   </div>
                   <div class="nk-gap-1"></div>
@@ -643,22 +486,10 @@
                   <div class="pl-15 pr-15">
                     <div class="nk-blog-post">
                       <div class="nk-post-thumb">
-                        <a href="blog-single.html">
+                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
                           <img src="assets/images/post-5-mid.jpg" alt="" class="nk-img-stretch" />
-                        </a>
-                        <div class="nk-post-category"><a href="#">Design</a></div>
-                      </div>
-                      <h2 class="nk-post-title h4">
-                        <a href="blog-single.html">Ten things about Photography</a>
-                      </h2>
-
-                      <div class="nk-post-date">August 14, 2016</div>
-
-                      <div class="nk-post-text">
-                        <p>
-                          Be forth, god for rule face abundantly all our two winged made. Is whose morning
-                          female.
-                        </p>
+                        </button>
+                        <div class="nk-post-category"><a href="#">LOGO</a></div>
                       </div>
                     </div>
                   </div>
@@ -671,22 +502,10 @@
                   <div class="pl-15 pr-15">
                     <div class="nk-blog-post">
                       <div class="nk-post-thumb">
-                        <a href="blog-single.html">
+                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
                           <img src="assets/images/post-6-mid.jpg" alt="" class="nk-img-stretch" />
-                        </a>
-                        <div class="nk-post-category"><a href="#">Design</a></div>
-                      </div>
-                      <h2 class="nk-post-title h4">
-                        <a href="blog-single.html">Why you should Always First</a>
-                      </h2>
-
-                      <div class="nk-post-date">August 14, 2016</div>
-
-                      <div class="nk-post-text">
-                        <p>
-                          Lights give have herb. First. Seed lesser his a fruit. Stars good divide fish appear
-                          don't, third deep.
-                        </p>
+                        </button>
+                        <div class="nk-post-category"><a href="#">Baner</a></div>
                       </div>
                     </div>
                   </div>
@@ -767,14 +586,9 @@
             <div class="nk-footer-social">
               <ul>
                 <li>
-                  <a href="https://twitter.com/nkdevv"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
                   <a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a>
                 </li>
-                <li>
-                  <a href="https://dribbble.com/_nK"><i class="fa fa-dribbble"></i></a>
-                </li>
+
                 <li>
                   <a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a>
                 </li>
@@ -790,9 +604,110 @@
       <!-- END: Footer -->
     </div>
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalLong"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Social Meadia Design</h5>
+            <!-- Close button with cross icon -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" class="mt-5" /><img
+              src="assets/images/post-1-mid.jpg"
+              alt=""
+              width="100%"
+              class="mt-5" /><img
+              src="assets/images/portfolio/cover-2.jpg"
+              alt=""
+              width="100%"
+              class="mt-5" /><img
+              src="assets/images/portfolio/cover-2.jpg"
+              alt=""
+              width="100%"
+              class="mt-5" /><img
+              src="assets/images/portfolio/cover-2.jpg"
+              alt=""
+              width="100%"
+              class="mt-5" /><img
+              src="assets/images/portfolio/cover-2.jpg"
+              alt=""
+              width="100%"
+              class="mt-5" /><img
+              src="assets/images/portfolio/cover-2.jpg"
+              alt=""
+              width="100%"
+              class="mt-5" /><img
+              src="assets/images/portfolio/cover-2.jpg"
+              alt=""
+              width="100%"
+              class="mt-5" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- START: Scripts -->
 
+    <!-- Bootstrap CSS and JS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script src="assets/js/combined.js"></script>
+
+    <script>
+      document.getElementById("toggleButton").addEventListener("click", function (event) {
+        event.preventDefault();
+        var content = document.getElementById("toggleContent");
+        if (content.style.display === "none" || content.style.display === "") {
+          content.style.display = "block"; // Show the content
+        } else {
+          content.style.display = "none"; // Hide the content
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".custom-carousel");
+        const carouselWrapper = document.querySelector(".custom-carousel-wrapper");
+        const totalWidth = carousel.scrollWidth; // Get the total width of the carousel
+        const itemCount = document.querySelectorAll(".custom-carousel-item").length; // Get the number of images
+
+        // Function to move the carousel
+        function moveCarousel() {
+          // Move the carousel to the left by the width of all items (totalWidth)
+          carousel.style.transform = `translateX(-${totalWidth / itemCount}px)`;
+        }
+
+        // Initially move the carousel
+        moveCarousel();
+
+        // After the transition ends, reset the position and start over
+        carousel.addEventListener("transitionend", function () {
+          // Reset the position of the carousel to the beginning
+          carousel.style.transition = "none"; // Disable transition temporarily
+          carousel.style.transform = "translateX(0)"; // Reset the position to the start
+
+          // After a small delay, re-enable the transition and continue sliding
+          setTimeout(function () {
+            carousel.style.transition = "transform 5s linear"; // Re-enable transition
+            moveCarousel(); // Start the animation again
+          }, 50); // Small delay to ensure smooth reset
+        });
+      });
+    </script>
 
     <!-- END: Scripts -->
   </body>
