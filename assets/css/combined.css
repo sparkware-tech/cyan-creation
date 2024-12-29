@@ -3382,6 +3382,13 @@ a.text-gray-dark:hover {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "FontTagLine";
+  src: url("assets/fonts/Tw Cen MT") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -6045,6 +6052,13 @@ h4 {
   display: table-cell;
   vertical-align: middle;
   padding: 60px 0;
+}
+.nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline{
+  color: white;
+  font-family: "FontTagLine";
+  padding-top: 20px;
+  font-size: 50px;
+  letter-spacing: 5px;
 }
 .nk-header-title .nk-header-text-bottom {
   padding-top: 30px;
