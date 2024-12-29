@@ -3371,7 +3371,7 @@ a.text-gray-dark:hover {
 
 @font-face {
   font-family: "FontTagLine";
-  src: url("assets/fonts/Tw.ttf") format("truetype");
+  src: url("../fonts/Tw.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
