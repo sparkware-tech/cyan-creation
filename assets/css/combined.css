@@ -3384,7 +3384,7 @@ a.text-gray-dark:hover {
 }
 @font-face {
   font-family: "FontTagLine";
-  src: url("assets/fonts/Tw Cen MT") format("truetype");
+  src: url("assets/fonts/Tw.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -6055,7 +6055,7 @@ h4 {
 }
 .nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
   color: white;
-  font-family: "FontTagLine";
+  font-family: FontTagLine;
   padding-top: 20px;
   font-size: 70px;
   letter-spacing: 5px;
