@@ -3368,20 +3368,7 @@ a.text-gray-dark:hover {
   font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: "Montserrat-Bold";
-  src: url("assets/fonts/Montserrat-Bold") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "MyCustomFont2";
-  src: url("assets/fonts/MyCustomFont2.woff2") format("woff2"),
-    url("assets/fonts/MyCustomFont2.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 @font-face {
   font-family: "FontTagLine";
   src: url("assets/fonts/Tw.ttf") format("truetype");
