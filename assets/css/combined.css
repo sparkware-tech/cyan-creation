@@ -3367,6 +3367,20 @@ a.text-gray-dark:hover {
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('assets/fonts/Montserrat-Bold') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyCustomFont2';
+  src: url('assets/fonts/MyCustomFont2.woff2') format('woff2'),
+       url('assets/fonts/MyCustomFont2.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -6347,14 +6361,10 @@ h4 {
   z-index: 1;
   height: 100%;
 }
-.nk-box-1 {
+.nk-box .header {
+  font-family: Montserrat-Bold;
 }
-.nk-box-2 {
-}
-.nk-box-3 {
-}
-.nk-box-4 {
-}
+
 .nk-box-line:before {
   content: "";
   display: block;
@@ -8033,6 +8043,9 @@ a:hover > .nk-icon-search:after {
   opacity: 0.99;
 }
 
+.contact .header{
+  font-family: Montserrat-Bold;
+}
 .about {
   background-size: cover;
   background-position: center;
@@ -8045,7 +8058,7 @@ a:hover > .nk-icon-search:after {
   font-weight: bold;
   font-size: 60px;
   letter-spacing: 2px;
-  font-family: sans-serif;
+  font-family: Montserrat-Bold;
 }
 
 .about .content {
@@ -8057,12 +8070,14 @@ a:hover > .nk-icon-search:after {
   padding-right: 90px;
   padding-top: 20px;
   font-size: 19px;
+  font-family: sans-serif;
 }
 
 .about .content .para-2 {
   padding-right: 250px;
   padding-top: 10px;
   font-size: 19px;
+  font-family: sans-serif;
 }
 
 .about .content .para-1 span,
