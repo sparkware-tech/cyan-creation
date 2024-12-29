@@ -3215,6 +3215,7 @@ a.bg-info:hover {
 }
 .text-xs-center {
   text-align: center !important;
+  color: #030241;
 }
 @media (min-width: 576px) {
   .text-sm-left {
@@ -3368,16 +3369,16 @@ a.text-gray-dark:hover {
   font-style: normal;
 }
 @font-face {
-  font-family: 'Montserrat-Bold';
-  src: url('assets/fonts/Montserrat-Bold') format('truetype');
+  font-family: "Montserrat-Bold";
+  src: url("assets/fonts/Montserrat-Bold") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'MyCustomFont2';
-  src: url('assets/fonts/MyCustomFont2.woff2') format('woff2'),
-       url('assets/fonts/MyCustomFont2.woff') format('woff');
+  font-family: "MyCustomFont2";
+  src: url("assets/fonts/MyCustomFont2.woff2") format("woff2"),
+    url("assets/fonts/MyCustomFont2.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -6130,6 +6131,9 @@ h4 {
 .nk-footer .nk-footer-text {
   font-size: 0.95rem;
 }
+.nk-footer .nk-footer-text p {
+  color: #030241;
+}
 .nk-footer .nk-footer-text a {
   text-decoration: none;
 }
@@ -6362,9 +6366,10 @@ h4 {
   height: 100%;
 }
 .nk-box .header {
-  font-family: Montserrat-Bold;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #030241;
 }
-
 .nk-box-line:before {
   content: "";
   display: block;
@@ -8043,9 +8048,24 @@ a:hover > .nk-icon-search:after {
   opacity: 0.99;
 }
 
-.contact .header{
-  font-family: Montserrat-Bold;
+.contact {
+  background-color: #030241;
 }
+
+.contact .header {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.contact p {
+  color: white;
+}
+
+.contact ul li strong {
+  color: white;
+}
+
 .about {
   background-size: cover;
   background-position: center;
@@ -8058,7 +8078,7 @@ a:hover > .nk-icon-search:after {
   font-weight: bold;
   font-size: 60px;
   letter-spacing: 2px;
-  font-family: Montserrat-Bold;
+  font-family: sans-serif;
 }
 
 .about .content {
