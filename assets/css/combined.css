@@ -6053,7 +6053,7 @@ h4 {
   vertical-align: middle;
   padding: 60px 0;
 }
-.nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline{
+.nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
   color: white;
   font-family: "FontTagLine";
   padding-top: 20px;
@@ -6150,6 +6150,7 @@ h4 {
 }
 .nk-footer .nk-footer-text a {
   text-decoration: none;
+  color: #030241;
 }
 .nk-widget {
   overflow: hidden;
