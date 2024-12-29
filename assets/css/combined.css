@@ -8066,6 +8066,14 @@ a:hover > .nk-icon-search:after {
   color: white;
 }
 
+.contact ul li a {
+  color: #00ffff;
+}
+
+.contact ul li a:hover {
+  color: #54c3c3;
+}
+
 .about {
   background-size: cover;
   background-position: center;
