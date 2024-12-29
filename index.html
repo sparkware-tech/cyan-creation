@@ -32,6 +32,16 @@
       .modal-dialog {
         max-width: 95% !important;
         margin: 0;
+        height: 90vh;
+      }
+
+      .modal-content {
+        height: 100%; /* Set the content to take full height */
+      }
+
+      .modal-body {
+        height: calc(100% - 56px); /* Adjust height considering the header height */
+        overflow-y: auto; /* Add scroll if the content overflows */
       }
 
       /* Outer container of the carousel */
@@ -679,7 +689,7 @@
             </div>
 
             <div class="nk-footer-text">
-              <p>&copy; 2025 CYAN. All Rights Reserved.</p>
+              <p class="mb-0">&copy; 2025 CYAN. All Rights Reserved.</p>
               <p>
                 Design by <a href="https://sparkware-tech.github.io/portfolio/" target="_blank">Sparkware</a>
               </p>
@@ -692,7 +702,7 @@
 
     <!-- Modal -->
     <div
-      class="modal fade pl-15"
+      class="modal fade pl-15 pt-10"
       id="exampleModalLong"
       tabindex="-1"
       role="dialog"
@@ -707,37 +717,6 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <!-- <div class="modal-body">
-            <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" class="mt-5" /><img
-              src="assets/images/post-1-mid.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" />
-          </div> -->
 
           <div class="modal-body">
             <div class="row pl-3 pr-3">
