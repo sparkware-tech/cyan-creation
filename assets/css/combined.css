@@ -6183,7 +6183,7 @@ h4 {
   user-select: none;
   text-transform: uppercase;
   transition: all 0.5s;
-  background-color: #252525;
+  background-color: #5955ff;
 }
 .nk-btn,
 .nk-btn.active,
@@ -6199,7 +6199,7 @@ h4 {
 .nk-btn:active,
 .nk-btn:focus,
 .nk-btn:hover {
-  background-color: #444;
+  background-color: #3734e4;
 }
 .nk-btn-xs {
   font-size: 0.9rem;
