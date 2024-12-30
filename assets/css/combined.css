@@ -5837,7 +5837,7 @@ h4 {
 .nk-navbar-full {
   padding: 0;
   overflow: hidden;
-  background: #252525;
+  background: #030241;
   z-index: 1002;
 }
 .nk-navbar-full .nk-nav-header {
@@ -5889,7 +5889,6 @@ h4 {
 .nk-navbar-full .nk-nav .dropdown > li > a,
 .nk-navbar-full .nk-nav > li:last-of-type > a,
 .nk-navbar-full .nk-nav > li > a {
-  font-family: Playfair Display, serif;
   font-size: 1.7rem;
   text-transform: none;
   font-weight: 700;
