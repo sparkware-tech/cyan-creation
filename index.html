@@ -716,7 +716,6 @@
     </div>
 
     <!-- Modal -->
-    <!-- Modal Structure -->
     <div
       class="modal fade"
       id="exampleModalLong"
@@ -733,8 +732,11 @@
             </button>
           </div>
           <div class="modal-body">
-            <div id="modalImages" class="d-flex flex-wrap"></div>
             <!-- Container for images -->
+            <div class="row">
+              <div class="col-lg-6 pl-0 pr-0" id="modalImagesRowOne"></div>
+              <div class="col-lg-6 pl-0 pr-0" id="modalImagesRowTwo"></div>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -772,16 +774,13 @@
           } else if (category === "Tute Covers") {
             const module = await import("./constants/tute-covers.js");
             categoryData = module.tuteCovers;
-          }
-          else if (category === "Logoes") {
+          } else if (category === "Logoes") {
             const module = await import("./constants/logoes.js");
             categoryData = module.logoes;
-          }
-          else if (category === "Baners") {
+          } else if (category === "Baners") {
             const module = await import("./constants/baners.js");
             categoryData = module.baners;
-          }
-           else if (category === "Handbills") {
+          } else if (category === "Handbills") {
             const module = await import("./constants/handbills.js");
             categoryData = module.handbills;
           }
@@ -799,25 +798,39 @@
 
           // Load the category data (images, title, description) from the constant file
           const categoryData = await loadCategoryData(category);
-          console.log(categoryData);
 
           // Populate the modal with the corresponding data
           if (categoryData) {
             document.getElementById("modalTitle").innerText = categoryData.title;
 
+            // Clear previous images from both rows
+            const modalImagesRowOne = document.getElementById("modalImagesRowOne");
+            const modalImagesRowTwo = document.getElementById("modalImagesRowTwo");
+            modalImagesRowOne.innerHTML = "";
+            modalImagesRowTwo.innerHTML = "";
 
-            // Clear previous images
-            const modalImages = document.getElementById("modalImages");
-            modalImages.innerHTML = "";
+            // Calculate the midpoint to divide images between two rows
+            const midPoint = Math.ceil(categoryData.images.length / 2);
 
-            // Append new images for the selected category
-            categoryData.images.forEach((image) => {
+            // Populate the first half of images in the first row
+            for (let i = 0; i < midPoint; i++) {
               const imgElement = document.createElement("img");
-              imgElement.src = image;
-              imgElement.alt = categoryData.title;
-              imgElement.className = "img-thumbnail m-2"; // Add styling as needed
-              modalImages.appendChild(imgElement);
-            });
+              imgElement.src = categoryData.images[i];
+              imgElement.alt = `Image ${i + 1}`;
+              imgElement.className = "img-fluid p-1"; // Add responsive classes
+              imgElement.style.width = "100%";
+              modalImagesRowOne.appendChild(imgElement);
+            }
+
+            // Populate the second half of images in the second row
+            for (let i = midPoint; i < categoryData.images.length; i++) {
+              const imgElement = document.createElement("img");
+              imgElement.src = categoryData.images[i];
+              imgElement.alt = `Image ${i + 1}`;
+              imgElement.className = "img-fluid p-1 "; // Add responsive classes
+              imgElement.style.width = "100%";
+              modalImagesRowTwo.appendChild(imgElement);
+            }
           }
         });
       });
