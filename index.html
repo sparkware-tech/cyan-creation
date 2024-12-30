@@ -759,20 +759,20 @@
         try {
           // Dynamically import the respective constant file based on category
           if (category === "Flyers") {
-            const module = await import("./constants/flyers.js");
+            const module = await import("./assets/constants/flyers.js");
 
             categoryData = module.flyers;
           } else if (category === "Tute Covers") {
-            const module = await import("./constants/tute-covers.js");
+            const module = await import("./assets/constants/tute-covers.js");
             categoryData = module.tuteCovers;
           } else if (category === "Logoes") {
-            const module = await import("./constants/logoes.js");
+            const module = await import("./assets/constants/logoes.js");
             categoryData = module.logoes;
           } else if (category === "Baners") {
-            const module = await import("./constants/baners.js");
+            const module = await import("./assets/constants/baners.js");
             categoryData = module.baners;
           } else if (category === "Handbills") {
-            const module = await import("./constants/handbills.js");
+            const module = await import("./assets/constants/handbills.js");
             categoryData = module.handbills;
           }
         } catch (error) {
