@@ -316,10 +316,7 @@
                 <img src="assets/images/artboard/Artboard 8.jpg" alt="college" class="custom-carousel-img" />
               </div>
               <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 9.jpg"
-                  alt="enhance"
-                  class="custom-carousel-img" />
+                <img src="assets/images/artboard/Artboard 9.jpg" alt="enhance" class="custom-carousel-img" />
               </div>
             </div>
           </div>
@@ -496,23 +493,41 @@
             data-dots="true">
             <div class="nk-carousel-inner">
               <div>
-                <div>
-                  <div class="pl-15 pr-15">
-                    <div class="nk-blog-post">
-                      <div class="nk-post-thumb">
-                        <button
-                          type="button"
-                          class="btn-blog-post"
-                          data-toggle="modal"
-                          data-target="#exampleModalLong">
-                          <img src="assets/images/portfolio/Flyer.jpg" alt="" class="nk-img-stretch" />
-                        </button>
-                        <div class="nk-post-category"><p>Flyers</p></div>
-                      </div>
+                <div class="pl-15 pr-15">
+                  <div class="nk-blog-post">
+                    <div class="nk-post-thumb">
+                      <button
+                        type="button"
+                        class="btn-blog-post"
+                        data-toggle="modal"
+                        data-target="#exampleModalLong"
+                        data-title="Flyers">
+                        <img src="assets/images/portfolio/Flyer.jpg" alt="Flyers" class="nk-img-stretch" />
+                      </button>
+                      <div class="nk-post-category"><p>Flyers</p></div>
                     </div>
                   </div>
-                  <div class="nk-gap-1"></div>
                 </div>
+                <div class="nk-gap-1"></div>
+              </div>
+
+              <div>
+                <div class="pl-15 pr-15">
+                  <div class="nk-blog-post">
+                    <div class="nk-post-thumb">
+                      <button
+                        type="button"
+                        class="btn-blog-post"
+                        data-toggle="modal"
+                        data-target="#exampleModalLong"
+                        data-title="Tute Covers">
+                        <img src="assets/images/portfolio/tute cover.jpg" alt="" class="nk-img-stretch" />
+                      </button>
+                      <div class="nk-post-category"><p>Tute Covers</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nk-gap-1"></div>
               </div>
 
               <div>
@@ -524,27 +539,8 @@
                           type="button"
                           class="btn-blog-post"
                           data-toggle="modal"
-                          data-target="#exampleModalLong">
-                          <img src="assets/images/portfolio/tute cover.jpg" alt="" class="nk-img-stretch" />
-                        </button>
-                        <div class="nk-post-category"><p>Tute Covers</p></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nk-gap-1"></div>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <div class="pl-15 pr-15">
-                    <div class="nk-blog-post">
-                      <div class="nk-post-thumb">
-                        <button
-                          type="button"
-                          class="btn-blog-post"
-                          data-toggle="modal"
-                          data-target="#exampleModalLong">
+                          data-target="#exampleModalLong"
+                          data-title="Logoes">
                           <img src="assets/images/portfolio/Logo Design.jpg" alt="" class="nk-img-stretch" />
                         </button>
                         <div class="nk-post-category"><p>Logoes</p></div>
@@ -564,7 +560,8 @@
                           type="button"
                           class="btn-blog-post"
                           data-toggle="modal"
-                          data-target="#exampleModalLong">
+                          data-target="#exampleModalLong"
+                          data-title="Baners">
                           <img src="assets/images/portfolio/Banner.jpg" alt="" class="nk-img-stretch" />
                         </button>
                         <div class="nk-post-category"><p>Baners</p></div>
@@ -584,7 +581,8 @@
                           type="button"
                           class="btn-blog-post"
                           data-toggle="modal"
-                          data-target="#exampleModalLong">
+                          data-target="#exampleModalLong"
+                          data-title="Handbills">
                           <img src="assets/images/portfolio/Handbill.jpg" alt="" class="nk-img-stretch" />
                         </button>
                         <div class="nk-post-category"><p>Handbills</p></div>
@@ -718,36 +716,28 @@
     </div>
 
     <!-- Modal -->
+    <!-- Modal Structure -->
     <div
-      class="modal fade pl-15 pt-10"
+      class="modal fade"
       id="exampleModalLong"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalLongTitle"
       aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Social Meadia Design</h5>
-            <!-- Close button with cross icon -->
+            <h5 class="modal-title" id="modalTitle">Title</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-
           <div class="modal-body">
-            <div class="row pl-3 pr-3">
-              <div class="col-lg-6 p-0">
-                <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" class="p-1" />
-                <img src="assets/images/portfolio/shirt-1.jpg" alt="" width="100%" class="p-1" />
-                <img src="assets/images/portfolio/card.jpg" alt="" width="100%" class="p-1" />
-              </div>
-              <div class="col-lg-6 p-0">
-                <img src="assets/images/portfolio/stiker.jpg" alt="" width="100%" class="p-1" />
-                <img src="assets/images/portfolio/baner.jpg" alt="" width="100%" class="p-1" />
-                <img src="assets/images/portfolio/book-cover.jpg" alt="" width="100%" class="p-1" />
-              </div>
-            </div>
+            <div id="modalImages" class="d-flex flex-wrap"></div>
+            <!-- Container for images -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -766,6 +756,70 @@
     <script>
       $(document).on("hidden.bs.modal", function (e) {
         $("body").css("padding-right", "0");
+      });
+    </script>
+
+    <script type="module">
+      // Function to load the appropriate constant file based on category
+      async function loadCategoryData(category) {
+        let categoryData;
+        try {
+          // Dynamically import the respective constant file based on category
+          if (category === "Flyers") {
+            const module = await import("./constants/flyers.js");
+
+            categoryData = module.flyers;
+          } else if (category === "Tute Covers") {
+            const module = await import("./constants/tute-covers.js");
+            categoryData = module.tuteCovers;
+          }
+          else if (category === "Logoes") {
+            const module = await import("./constants/logoes.js");
+            categoryData = module.logoes;
+          }
+          else if (category === "Baners") {
+            const module = await import("./constants/baners.js");
+            categoryData = module.baners;
+          }
+           else if (category === "Handbills") {
+            const module = await import("./constants/handbills.js");
+            categoryData = module.handbills;
+          }
+        } catch (error) {
+          console.error("Error loading category data:", error);
+        }
+        return categoryData;
+      }
+
+      // Listen for button clicks
+      document.querySelectorAll(".btn-blog-post").forEach((button) => {
+        button.addEventListener("click", async function () {
+          // Get the category from the clicked button
+          const category = this.getAttribute("data-title");
+
+          // Load the category data (images, title, description) from the constant file
+          const categoryData = await loadCategoryData(category);
+          console.log(categoryData);
+
+          // Populate the modal with the corresponding data
+          if (categoryData) {
+            document.getElementById("modalTitle").innerText = categoryData.title;
+
+
+            // Clear previous images
+            const modalImages = document.getElementById("modalImages");
+            modalImages.innerHTML = "";
+
+            // Append new images for the selected category
+            categoryData.images.forEach((image) => {
+              const imgElement = document.createElement("img");
+              imgElement.src = image;
+              imgElement.alt = categoryData.title;
+              imgElement.className = "img-thumbnail m-2"; // Add styling as needed
+              modalImages.appendChild(imgElement);
+            });
+          }
+        });
       });
     </script>
 
