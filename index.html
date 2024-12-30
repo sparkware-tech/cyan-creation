@@ -56,10 +56,19 @@
         width: 100%; /* Full width */
       }
 
-      /* This is the carousel itself, holding all items */
       .custom-carousel {
         display: flex;
-        transition: transform 5s linear; /* Smooth transition when sliding */
+        width: calc(200%);
+        animation: scroll 20s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%); /* Scroll to hide 5 images */
+        }
       }
 
       /* Each carousel item */
@@ -276,43 +285,40 @@
               <div class="custom-carousel-item">
                 <img
                   src="assets/images/artboard/Artboard 1.jpg"
-                  alt="Book Covers"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 2.jpg" alt="Banner" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 3.jpg" alt="College" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 4.jpg" alt="Handbill" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 5.jpg"
-                  alt="Invitation"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 6.jpg" alt="Logos" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 7.jpg"
-                  alt="Photo Enhance"
+                  alt="Social meadia"
                   class="custom-carousel-img" />
               </div>
               <div class="custom-carousel-item">
                 <img
-                  src="assets/images/artboard/Artboard 8.jpg"
-                  alt="Social Media Flyers"
+                  src="assets/images/artboard/Artboard 2.jpg"
+                  alt="book cover"
                   class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 3.jpg" alt="handbill" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 4.jpg" alt="thumnal" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 5.jpg" alt="logoes" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 6.jpg"
+                  alt="invitation"
+                  class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 7.jpg" alt="baner" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 8.jpg" alt="college" class="custom-carousel-img" />
               </div>
               <div class="custom-carousel-item">
                 <img
                   src="assets/images/artboard/Artboard 9.jpg"
-                  alt="YouTube Thumbnail"
+                  alt="enhance"
                   class="custom-carousel-img" />
               </div>
             </div>
@@ -756,37 +762,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="assets/js/combined.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const carousel = document.querySelector(".custom-carousel");
-        const carouselWrapper = document.querySelector(".custom-carousel-wrapper");
-        const totalWidth = carousel.scrollWidth; // Get the total width of the carousel
-        const itemCount = document.querySelectorAll(".custom-carousel-item").length; // Get the number of images
-
-        // Function to move the carousel
-        function moveCarousel() {
-          // Move the carousel to the left by the width of all items (totalWidth)
-          carousel.style.transform = `translateX(-${totalWidth / itemCount}px)`;
-        }
-
-        // Initially move the carousel
-        moveCarousel();
-
-        // After the transition ends, reset the position and start over
-        carousel.addEventListener("transitionend", function () {
-          // Reset the position of the carousel to the beginning
-          carousel.style.transition = "none"; // Disable transition temporarily
-          carousel.style.transform = "translateX(0)"; // Reset the position to the start
-
-          // After a small delay, re-enable the transition and continue sliding
-          setTimeout(function () {
-            carousel.style.transition = "transform 5s linear"; // Re-enable transition
-            moveCarousel(); // Start the animation again
-          }, 0); // Small delay to ensure smooth reset
-        });
-      });
-    </script>
 
     <script>
       $(document).on("hidden.bs.modal", function (e) {
