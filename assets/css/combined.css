@@ -6039,12 +6039,36 @@ h4 {
   vertical-align: middle;
   padding: 60px 0;
 }
+.nk-header-title .nk-header-table-cell .nk-header-table-cell-logo img {
+  width: 50%;
+}
 .nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
   color: white;
   font-family: FontTagLine;
   padding-top: 20px;
   font-size: 70px;
   letter-spacing: 5px;
+}
+@media (max-width: 1000px) {
+  .nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
+    padding-top: 20px;
+    font-size: 60px;
+    letter-spacing: 5px;
+  }
+}
+@media (max-width: 775px) {
+  .nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
+    padding-top: 10px;
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+}
+@media (max-width: 500px) {
+  .nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
+    padding-top: 10px;
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
 }
 .nk-header-title .nk-header-text-bottom {
   padding-top: 30px;
@@ -8076,6 +8100,7 @@ a:hover > .nk-icon-search:after {
 }
 
 .about {
+  background-image: url(../images//about.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -8129,4 +8154,94 @@ a:hover > .nk-icon-search:after {
   text-align: justify;
   font-weight: bold;
   font-family: sans-serif;
+}
+
+@media (max-width: 1265px) {
+  .about .content .para-1 {
+    padding-right: 70px;
+    padding-top: 15px;
+    font-size: 19px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 200px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about .content {
+    padding-top: 10px;
+    padding-left: 80px;
+  }
+
+  .about .content .para-1 {
+    padding-right: 50px;
+    padding-top: 15px;
+    font-size: 19px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 180px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about .content {
+    padding-top: 10px;
+    padding-left: 80px;
+  }
+
+  .about .content .para-1 {
+    padding-right: 50px;
+    padding-top: 15px;
+    font-size: 19px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 180px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  .about {
+    background-image: url(../images/about.jpg);
+    background-size: cover;
+    background-position: right;
+    height: auto;
+  }
+
+  .about .content {
+    padding-left: 40px;
+  }
+
+  .about .content .para-1 {
+    padding-right: 0px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .title {
+    font-size: 40px;
+  }
+
+  .about .content {
+    padding-left: 40px;
+  }
+
+  .about .content .para-1 {
+    padding-right: 20px;
+    font-size: 16px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 20px;
+    font-size: 16px;
+  }
 }
