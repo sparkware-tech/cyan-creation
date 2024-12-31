@@ -3215,6 +3215,7 @@ a.bg-info:hover {
 }
 .text-xs-center {
   text-align: center !important;
+  color: #030241;
 }
 @media (min-width: 576px) {
   .text-sm-left {
@@ -3355,6 +3356,26 @@ a.text-gray-dark:hover {
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: FontAwesome;
+  src: url(../fonts/fontawesome-webfont.eot?v=4.7.0);
+  src: url(../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"),
+    url(../fonts/fontawesome-webfont.woff2?v=4.7.0) format("woff2"),
+    url(../fonts/fontawesome-webfont.woff?v=4.7.0) format("woff"),
+    url(../fonts/fontawesome-webfont.ttf?v=4.7.0) format("truetype"),
+    url(../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FontTagLine";
+  src: url("../fonts/Tw.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -5816,7 +5837,7 @@ h4 {
 .nk-navbar-full {
   padding: 0;
   overflow: hidden;
-  background: #252525;
+  background: #030241;
   z-index: 1002;
 }
 .nk-navbar-full .nk-nav-header {
@@ -5868,7 +5889,6 @@ h4 {
 .nk-navbar-full .nk-nav .dropdown > li > a,
 .nk-navbar-full .nk-nav > li:last-of-type > a,
 .nk-navbar-full .nk-nav > li > a {
-  font-family: Playfair Display, serif;
   font-size: 1.7rem;
   text-transform: none;
   font-weight: 700;
@@ -6019,6 +6039,37 @@ h4 {
   vertical-align: middle;
   padding: 60px 0;
 }
+.nk-header-title .nk-header-table-cell .nk-header-table-cell-logo img {
+  width: 50%;
+}
+.nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
+  color: white;
+  font-family: FontTagLine;
+  padding-top: 20px;
+  font-size: 70px;
+  letter-spacing: 5px;
+}
+@media (max-width: 1000px) {
+  .nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
+    padding-top: 20px;
+    font-size: 60px;
+    letter-spacing: 5px;
+  }
+}
+@media (max-width: 775px) {
+  .nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
+    padding-top: 10px;
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+}
+@media (max-width: 500px) {
+  .nk-header-title .nk-header-table-cell .nk-header-table-cell-logo .tagline {
+    padding-top: 10px;
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+}
 .nk-header-title .nk-header-text-bottom {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -6104,6 +6155,13 @@ h4 {
 .nk-footer .nk-footer-text {
   font-size: 0.95rem;
 }
+.nk-footer .nk-footer-text p {
+  color: #030241;
+}
+.nk-footer .nk-footer-text a {
+  text-decoration: none;
+  color: #030241;
+}
 .nk-widget {
   overflow: hidden;
 }
@@ -6150,7 +6208,7 @@ h4 {
   user-select: none;
   text-transform: uppercase;
   transition: all 0.5s;
-  background-color: #252525;
+  background-color: #5955ff;
 }
 .nk-btn,
 .nk-btn.active,
@@ -6166,7 +6224,7 @@ h4 {
 .nk-btn:active,
 .nk-btn:focus,
 .nk-btn:hover {
-  background-color: #444;
+  background-color: #3734e4;
 }
 .nk-btn-xs {
   font-size: 0.9rem;
@@ -6332,13 +6390,10 @@ h4 {
   z-index: 1;
   height: 100%;
 }
-.nk-box-1 {
-}
-.nk-box-2 {
-}
-.nk-box-3 {
-}
-.nk-box-4 {
+.nk-box .header {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #030241;
 }
 .nk-box-line:before {
   content: "";
@@ -6368,8 +6423,11 @@ h4 {
   padding: 0;
   list-style-type: none;
 }
+.nk-contact-info li a {
+  text-decoration: none;
+}
 .nk-contact-info > li + li {
-  margin-top: 12px;
+  margin-top: 5px;
 }
 .nk-contact-info > li > strong {
   color: #171717;
@@ -6378,7 +6436,6 @@ h4 {
 .nk-pagination {
   width: 100%;
   background-color: #fff;
-  padding: 20px 0;
 }
 .nk-pagination.nk-pagination-nobg {
   background-color: transparent;
@@ -7594,13 +7651,13 @@ a:hover > .nk-icon-search:after {
   align-items: center;
 }
 .nk-blog-isotope .nk-blog-post {
-  padding: 25px 30px;
+  padding: 25px 30px 1px 30px;
   background-color: #fff;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.03);
 }
 .nk-blog-isotope .nk-blog-post .nk-post-thumb {
   position: relative;
-  margin: -25px -30px 21px;
+  margin: -25px -30px 10px;
 }
 .nk-blog-isotope .nk-blog-post .nk-post-thumb > a {
   transition: opacity 0.5s;
@@ -7608,7 +7665,19 @@ a:hover > .nk-icon-search:after {
 .nk-blog-isotope .nk-blog-post .nk-post-thumb > a:hover {
   opacity: 0.6;
 }
-.nk-blog-isotope .nk-blog-post .nk-post-category a {
+.nk-blog-isotope .nk-blog-post .nk-post-thumb img {
+  transition: transform 0.3s ease;
+}
+.nk-blog-isotope .nk-blog-post .nk-post-thumb img:hover {
+  transform: scale(1.1);
+}
+.nk-blog-isotope .nk-blog-post .nk-post-thumb .btn-blog-post {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+.nk-blog-isotope .nk-blog-post .nk-post-category p {
   display: inline-block;
   background-color: #252525;
   text-transform: uppercase;
@@ -7625,7 +7694,7 @@ a:hover > .nk-icon-search:after {
   color: #fff;
   transition: background-color 0.5s;
 }
-.nk-blog-isotope .nk-blog-post .nk-post-category a:hover {
+.nk-blog-isotope .nk-blog-post .nk-post-category p:hover {
   background-color: #393939;
 }
 .nk-blog-isotope .nk-blog-post a + .nk-post-category a {
@@ -8002,4 +8071,177 @@ a:hover > .nk-icon-search:after {
 .nano:hover > .nano-pane {
   visibility: visible\9;
   opacity: 0.99;
+}
+
+.contact {
+  background-color: #030241;
+}
+
+.contact .header {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.contact p {
+  color: white;
+}
+
+.contact ul li strong {
+  color: white;
+}
+
+.contact ul li a {
+  color: #00ffff;
+}
+
+.contact ul li a:hover {
+  color: #54c3c3;
+}
+
+.about {
+  background-image: url(../images//about.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.about .title {
+  text-align: center;
+  padding-top: 40px;
+  font-weight: bold;
+  font-size: 60px;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+}
+
+.about .content {
+  padding-top: 30px;
+  padding-left: 100px;
+}
+
+.about .content .para-1 {
+  padding-right: 90px;
+  padding-top: 20px;
+  font-size: 19px;
+  font-family: sans-serif;
+}
+
+.about .content .para-2 {
+  padding-right: 250px;
+  padding-top: 10px;
+  font-size: 19px;
+  font-family: sans-serif;
+}
+
+.about .content .para-1 span,
+.about .content .para-2 span {
+  font-size: 40px;
+}
+
+.about .content h4 {
+  display: inline-block;
+  padding: 5px 30px 5px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+}
+
+.about .content p {
+  font-size: 18px;
+  text-align: justify;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+@media (max-width: 1265px) {
+  .about .content .para-1 {
+    padding-right: 70px;
+    padding-top: 15px;
+    font-size: 19px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 200px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about .content {
+    padding-top: 10px;
+    padding-left: 80px;
+  }
+
+  .about .content .para-1 {
+    padding-right: 50px;
+    padding-top: 15px;
+    font-size: 19px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 180px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about .content {
+    padding-top: 10px;
+    padding-left: 80px;
+  }
+
+  .about .content .para-1 {
+    padding-right: 50px;
+    padding-top: 15px;
+    font-size: 19px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 180px;
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  .about {
+    background-image: url(../images/about.jpg);
+    background-size: cover;
+    background-position: right;
+    height: auto;
+  }
+
+  .about .content {
+    padding-left: 40px;
+  }
+
+  .about .content .para-1 {
+    padding-right: 0px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .title {
+    font-size: 40px;
+  }
+
+  .about .content {
+    padding-left: 40px;
+  }
+
+  .about .content .para-1 {
+    padding-right: 20px;
+    font-size: 16px;
+  }
+
+  .about .content .para-2 {
+    padding-right: 20px;
+    font-size: 16px;
+  }
 }

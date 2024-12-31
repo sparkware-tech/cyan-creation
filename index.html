@@ -22,12 +22,26 @@
       rel="stylesheet"
       type="text/css" />
 
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet" />
+
     <link rel="stylesheet" href="assets/css/combined.css" />
 
     <style>
       .modal-dialog {
-        max-width: 100% !important;
+        max-width: 95% !important;
         margin: 0;
+        height: 90vh;
+      }
+
+      .modal-content {
+        height: 100%; /* Set the content to take full height */
+      }
+
+      .modal-body {
+        height: calc(100% - 56px); /* Adjust height considering the header height */
+        overflow-y: auto; /* Add scroll if the content overflows */
       }
 
       /* Outer container of the carousel */
@@ -42,10 +56,19 @@
         width: 100%; /* Full width */
       }
 
-      /* This is the carousel itself, holding all items */
       .custom-carousel {
         display: flex;
-        transition: transform 5s linear; /* Smooth transition when sliding */
+        width: calc(200%);
+        animation: scroll 20s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%); /* Scroll to hide 5 images */
+        }
       }
 
       /* Each carousel item */
@@ -59,6 +82,34 @@
         width: 100%; /* Ensure image takes up full item width */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover; /* Ensure images are cropped if necessary */
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        border-radius: 50%;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .whatsapp-float:hover {
+        background-color: #189c48;
+      }
+
+      .whatsapp-float a {
+        font-size: 32px;
+        color: white;
+      }
+
+      .whatsapp-float a:hover {
+        color: white;
       }
     </style>
 
@@ -112,7 +163,7 @@
 -->
     <nav class="nk-navbar nk-navbar-full nk-navbar-align-center" id="nk-nav-mobile">
       <div class="nk-navbar-bg">
-        <div class="bg-image" style="background-image: url('assets/images/bg-menu.jpg')"></div>
+        <div class="bg-image"></div>
       </div>
       <div class="nk-nav-table">
         <div class="nk-nav-row">
@@ -148,13 +199,7 @@
             <div class="nk-nav-social">
               <ul>
                 <li>
-                  <a href="https://twitter.com/nkdevv"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
                   <a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="https://dribbble.com/_nK"><i class="fa fa-dribbble"></i></a>
                 </li>
                 <li>
                   <a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a>
@@ -178,8 +223,8 @@
           <div class="nk-header-table-cell">
             <div class="container">
               <div class="nk-header-table-cell-logo">
-                <img src="assets/images/logo_bloom.gif" alt="logo_home" width="50%" />
-                <img src="assets/images/tag.png" alt="tag" width="70%" />
+                <img src="assets/images/logo_bloom.gif" alt="logo_home" />
+                <h1 class="tagline">WHERE IDEAS BLOOM</h1>
               </div>
 
               <div class="nk-gap"></div>
@@ -202,9 +247,27 @@
       <!-- END: Header Title -->
 
       <!-- START: About Our Agency -->
-      <div class="bg-white" id="about">
-        <img src="assets/images/about.jpg" width="100%" />
+      <div class="bg-white about pt-40" id="about">
+        <h1 class="title">Hi there!</h1>
+        <div class="row">
+          <div class="col-lg-7 col-md-9 col-sm-12 content">
+            <h4>About Me</h4>
+            <p class="para-1">
+              "My name is Kavinda Gayan, and I am the Senior Graphic Designer at CYAN Creations. I take pride
+              in being a creative, approachable, and passionate professional dedicated to crafting compelling
+              and innovative designs. With a knack for thinking outside the box, I thrive on generating unique
+              ideas that inspire and captivate.
+            </p>
+            <p class="para-2">
+              Here, I showcase some of my designs - each a testament to my commitment, effort, and enthusiasm
+              for the craft. I am driven to continually expand my skills and gain new experiences to elevate
+              my work further. Together, let’s collaborate, share ideas, and push the boundaries of creativity
+              to achieve remarkable outcomes."
+            </p>
+          </div>
+        </div>
       </div>
+
       <!-- END: About Our Agency -->
 
       <!-- START: Partners -->
@@ -215,44 +278,38 @@
               <div class="custom-carousel-item">
                 <img
                   src="assets/images/artboard/Artboard 1.jpg"
-                  alt="Book Covers"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 2.jpg" alt="Banner" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 3.jpg" alt="College" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 4.jpg" alt="Handbill" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 5.jpg"
-                  alt="Invitation"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 6.jpg" alt="Logos" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 7.jpg"
-                  alt="Photo Enhance"
+                  alt="Social meadia"
                   class="custom-carousel-img" />
               </div>
               <div class="custom-carousel-item">
                 <img
-                  src="assets/images/artboard/Artboard 8.jpg"
-                  alt="Social Media Flyers"
+                  src="assets/images/artboard/Artboard 2.jpg"
+                  alt="book cover"
                   class="custom-carousel-img" />
               </div>
               <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 3.jpg" alt="handbill" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 4.jpg" alt="thumnal" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 5.jpg" alt="logoes" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
                 <img
-                  src="assets/images/artboard/Artboard 9.jpg"
-                  alt="YouTube Thumbnail"
+                  src="assets/images/artboard/Artboard 6.jpg"
+                  alt="invitation"
                   class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 7.jpg" alt="baner" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 8.jpg" alt="college" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 9.jpg" alt="enhance" class="custom-carousel-img" />
               </div>
             </div>
           </div>
@@ -318,115 +375,110 @@
       </div>
       <!-- END: Features -->
 
-      <!-- START: Blog -->
-      <div class="nk-box bg-gray-1" id="portfolio">
-        <div class="nk-gap-4 mt-5"></div>
+      <!-- START: Portfolio -->
+      <div class="nk-box bg-gray-1 pt-70" id="portfolio">
+        <h2 class="text-xs-center display-4 header">PORTFOLIO</h2>
 
-        <h2 class="text-xs-center display-4">Portfolio</h2>
-
-        <div class="container">
-          <!-- START: Filter -->
-          <div class="nk-pagination nk-pagination-nobg nk-pagination-center">
-            <a href="#nk-toggle-filter" id="toggleButton">
-              <span class="nk-icon-squares"></span>
-            </a>
-          </div>
-        </div>
-
-        <div id="toggleContent" style="display: none">
-          <div class="container mt-40">
-            <div class="row">
-              <div class="col-lg-12">
-                <img src="assets/images/portfolio/cover.jpg" alt="" width="100%" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container mt-10">
-            <div class="row">
-              <div class="col-lg-12">
-                <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container mt-10">
-            <div class="row">
-              <div class="col-lg-6">
-                <img src="assets/images/portfolio/shirt-1.jpg" alt="" width="100%" />
-              </div>
-              <div class="col-lg-6">
-                <img src="assets/images/portfolio/shirt-2.jpg" alt="" width="100%" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container mt-10">
-            <div class="row">
-              <div class="col-lg-6">
-                <img src="assets/images/portfolio/contact.jpg" alt="" width="100%" />
-              </div>
-              <div class="col-lg-6">
-                <img src="assets/images/portfolio/wallpaper.jpg" alt="" width="100%" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container mt-10">
-            <div class="row">
-              <div class="col-lg-12">
-                <img src="assets/images/portfolio/baner.jpg" alt="" width="100%" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container mt-10">
-            <div class="row">
-              <div class="col-lg-6">
-                <img src="assets/images/portfolio/book-cover.jpg" alt="" width="100%" />
-              </div>
-              <div class="col-lg-6">
-                <img src="assets/images/portfolio/bag-cover.jpg" alt="" width="100%" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container mt-10">
-            <div class="row">
-              <div class="col-lg-6">
-                <img src="assets/images/portfolio/baner-2.jpg" alt="" width="100%" />
-              </div>
-              <div class="col-lg-6">
-                <img src="assets/images/portfolio/stiker.jpg" alt="" width="100%" />
-                <img src="assets/images/portfolio/card.jpg" alt="" width="100%" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container mt-10">
-            <div class="row">
-              <div class="col-lg-12">
-                <img src="assets/images/portfolio/thank-cover.jpg" alt="" width="100%" />
-              </div>
-            </div>
-          </div>
-
-          <div class="nk-gap-2 mt-12"></div>
-        </div>
-
-        <div class="nk-gap mnt-6"></div>
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 offset-lg-2">
+            <div class="col-lg-12">
               <div class="text-xs-center">
-                Donec orci sem, pretium ac dolor et, faucibus faucibus mauris. Etiam,pellentesque faucibus.
-                Vestibulum gravida volutpat ipsum non ultrices.
+                "Welcome to my graphic design portfolio, a curated collection of my creative journey and
+                passion for design. Here, you'll find a variety of projects that showcase my skills in
+                crafting visually compelling and impactful designs. Each piece reflects my dedication to
+                creativity, attention to detail, and commitment to delivering meaningful visual solutions.
+              </div>
+              <div class="text-xs-center mt-2">
+                From branding to digital art, these works are a testament to my versatility and love for
+                design. I invite you to explore and discover how I bring ideas to life through bold concepts,
+                innovative thinking, and a keen eye for aesthetics. Let’s create something
+                extraordinary together."
               </div>
             </div>
           </div>
         </div>
 
-        <div class="nk-gap-2 mt-12"></div>
+        <div class="mt-25">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 pr-0 pl-0">
+                <img src="assets/images/portfolio/cover.jpg" alt="" width="100%" class="p-1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 pr-0 pl-0">
+                <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" class="p-1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 pr-0 pl-0">
+                <img src="assets/images/portfolio/shirt-1.jpg" alt="" width="100%" class="p-1" />
+              </div>
+              <div class="col-lg-6 pr-0 pl-0">
+                <img src="assets/images/portfolio/shirt-2.jpg" alt="" width="100%" class="p-1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 pr-0 pl-0">
+                <img src="assets/images/portfolio/contact.jpg" alt="" width="100%" class="p-1" />
+              </div>
+              <div class="col-lg-6 pr-0 pl-0">
+                <img src="assets/images/portfolio/wallpaper.jpg" alt="" width="100%" class="p-1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 pr-0 pl-0">
+                <img src="assets/images/portfolio/baner.jpg" alt="" width="100%" class="p-1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 pr-0 pl-0">
+                <img src="assets/images/portfolio/book-cover.jpg" alt="" width="100%" class="p-1" />
+              </div>
+              <div class="col-lg-6 pr-0 pl-0">
+                <img src="assets/images/portfolio/bag-cover.jpg" alt="" width="100%" class="p-1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 pr-0 pl-0">
+                <img src="assets/images/portfolio/baner-2.jpg" alt="" width="100%" class="p-1" />
+              </div>
+              <div class="col-lg-6 pr-0 pl-0">
+                <img src="assets/images/portfolio/stiker.jpg" alt="" width="100%" class="p-1" />
+                <img src="assets/images/portfolio/card.jpg" alt="" width="100%" class="p-1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 pr-0 pl-0">
+                <img src="assets/images/portfolio/thank-cover.jpg" alt="" width="100%" class="p-1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="nk-gap-2"></div>
+        </div>
+
         <div class="container">
           <!-- START: Carousel -->
           <div
@@ -438,10 +490,55 @@
                   <div class="pl-15 pr-15">
                     <div class="nk-blog-post">
                       <div class="nk-post-thumb">
-                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
-                          <img src="assets/images/post-1-mid.jpg" alt="" class="nk-img-stretch" />
+                        <button
+                          type="button"
+                          class="btn-blog-post"
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          data-title="Logoes">
+                          <img src="assets/images/portfolio/Logo Design.jpg" alt="" class="nk-img-stretch" />
                         </button>
-                        <div class="nk-post-category"><a href="#">Cover</a></div>
+                        <div class="nk-post-category"><p>Logoes</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="pl-15 pr-15">
+                  <div class="nk-blog-post">
+                    <div class="nk-post-thumb">
+                      <button
+                        type="button"
+                        class="btn-blog-post"
+                        data-toggle="modal"
+                        data-target="#exampleModalLong"
+                        data-title="Tute Covers">
+                        <img src="assets/images/portfolio/tute cover.jpg" alt="" class="nk-img-stretch" />
+                      </button>
+                      <div class="nk-post-category"><p>Tute Covers</p></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="nk-gap-1"></div>
+              </div>
+
+              <div>
+                <div>
+                  <div class="pl-15 pr-15">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <button
+                          type="button"
+                          class="btn-blog-post"
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          data-title="Baners">
+                          <img src="assets/images/portfolio/Banner.jpg" alt="" class="nk-img-stretch" />
+                        </button>
+                        <div class="nk-post-category"><p>Baners</p></div>
                       </div>
                     </div>
                   </div>
@@ -454,10 +551,15 @@
                   <div class="pl-15 pr-15">
                     <div class="nk-blog-post">
                       <div class="nk-post-thumb">
-                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
-                          <img src="assets/images/post-3-mid.jpg" alt="" class="nk-img-stretch" />
+                        <button
+                          type="button"
+                          class="btn-blog-post"
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          data-title="Handbills">
+                          <img src="assets/images/portfolio/Handbill.jpg" alt="" class="nk-img-stretch" />
                         </button>
-                        <div class="nk-post-category"><a href="#">Social meadia</a></div>
+                        <div class="nk-post-category"><p>Handbills</p></div>
                       </div>
                     </div>
                   </div>
@@ -466,116 +568,108 @@
               </div>
 
               <div>
-                <div>
-                  <div class="pl-15 pr-15">
-                    <div class="nk-blog-post">
-                      <div class="nk-post-thumb">
-                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
-                          <img src="assets/images/post-4-mid.jpg" alt="" class="nk-img-stretch" />
-                        </button>
-                        <div class="nk-post-category"><a href="#">Branding</a></div>
-                      </div>
+                <div class="pl-15 pr-15">
+                  <div class="nk-blog-post">
+                    <div class="nk-post-thumb">
+                      <button
+                        type="button"
+                        class="btn-blog-post"
+                        data-toggle="modal"
+                        data-target="#exampleModalLong"
+                        data-title="Flyers">
+                        <img src="assets/images/portfolio/Flyer.jpg" alt="Flyers" class="nk-img-stretch" />
+                      </button>
+                      <div class="nk-post-category"><p>Flyers</p></div>
                     </div>
                   </div>
-                  <div class="nk-gap-1"></div>
                 </div>
-              </div>
-
-              <div>
-                <div>
-                  <div class="pl-15 pr-15">
-                    <div class="nk-blog-post">
-                      <div class="nk-post-thumb">
-                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
-                          <img src="assets/images/post-5-mid.jpg" alt="" class="nk-img-stretch" />
-                        </button>
-                        <div class="nk-post-category"><a href="#">LOGO</a></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nk-gap-1"></div>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <div class="pl-15 pr-15">
-                    <div class="nk-blog-post">
-                      <div class="nk-post-thumb">
-                        <button type="button" class="" data-toggle="modal" data-target="#exampleModalLong">
-                          <img src="assets/images/post-6-mid.jpg" alt="" class="nk-img-stretch" />
-                        </button>
-                        <div class="nk-post-category"><a href="#">Baner</a></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nk-gap-1"></div>
-                </div>
+                <div class="nk-gap-1"></div>
               </div>
             </div>
           </div>
           <!-- END: Carousel -->
         </div>
-        <div class="nk-gap-5 mt-20"></div>
+        <div class="nk-gap-5"></div>
       </div>
       <!-- END: Blog -->
 
       <!-- START: Contact Info -->
-      <div class="container" id="contact">
-        <div class="nk-gap-5"></div>
-        <div class="row vertical-gap">
-          <div class="col-lg-5">
-            <!-- START: Info -->
-            <h2 class="display-4">Contact Info:</h2>
-            <div class="nk-gap mnt-3"></div>
+      <div class="contact">
+        <div class="container pt-80 contact" id="contact">
+          <div class="row vertical-gap">
+            <div class="col-lg-5">
+              <!-- START: Info -->
+              <h2 class="display-4 header">Contact Info</h2>
+              <div class="nk-gap mnt-3"></div>
 
-            <p>
-              Praesent interdum congue mauris, et fringilla lacus pel vitae. Quisque nisl mauris, aliquam eu
-              ultrices vel, conse vitae sapien at imperdiet risus. Quisque cursus risus id. fermentum, in
-              auctor quam consectetur.
-            </p>
+              <p>
+                "Have a project in mind or need assistance bringing your ideas to life? Feel free to reach
+                out! I'm always open to new opportunities, collaborations, or simply connecting with fellow
+                creatives. Let’s discuss how we can work together to create something exceptional.
+              </p>
 
-            <ul class="nk-contact-info">
-              <li><strong>Address:</strong> 10111 Santa Monica Boulevard, LA</li>
-              <li><strong>Phone:</strong> +44 987 065 908</li>
-              <li><strong>Email:</strong> info@Example.com</li>
-              <li><strong>Fax:</strong> +44 987 065 909</li>
-            </ul>
-            <!-- END: Info -->
-          </div>
-          <div class="col-lg-7">
-            <!-- START: Form -->
-            <form action="#" class="nk-form nk-form-ajax">
-              <div class="row vertical-gap">
-                <div class="col-md-6">
-                  <input type="text" class="form-control required" name="name" placeholder="Your Name" />
+              <p>
+                You can contact me through the details provided below - I look forward to hearing from you!"
+              </p>
+
+              <ul class="nk-contact-info">
+                <li>
+                  <strong>Facebook :</strong
+                  ><a href="https://www.facebook.com" target="_blank">Cyan Creations</a>
+                </li>
+                <li>
+                  <strong>Instergram :</strong>
+                  <a href="https://www.instagram.com" target="_blank">Cyan Creations</a>
+                </li>
+                <li><strong>Email :</strong> <a href="mailto:cyan@gmail.com">cyan@gmail.com</a></li>
+                <li>
+                  <strong>WhatsApp No :</strong>
+                  <a href="https://wa.me/+94784953634" target="_blank">+94 495 3634</a>
+                </li>
+              </ul>
+              <!-- END: Info -->
+            </div>
+            <div class="col-lg-7">
+              <!-- START: Form -->
+              <form action="#" class="nk-form nk-form-ajax pt-20">
+                <div class="row vertical-gap">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control required" name="name" placeholder="Your Name" />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" class="form-control required" name="email" placeholder="Your Email" />
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <input type="email" class="form-control required" name="email" placeholder="Your Email" />
-                </div>
-              </div>
 
-              <div class="nk-gap-1"></div>
-              <input type="text" class="form-control required" name="title" placeholder="Your Title" />
+                <div class="nk-gap-1"></div>
+                <input type="text" class="form-control required" name="title" placeholder="Your Title" />
 
-              <div class="nk-gap-1"></div>
-              <textarea
-                class="form-control required"
-                name="message"
-                rows="8"
-                placeholder="Your Comment"
-                aria-required="true"></textarea>
-              <div class="nk-gap-1"></div>
-              <div class="nk-form-response-success"></div>
-              <div class="nk-form-response-error"></div>
-              <button class="nk-btn">Send Message</button>
-            </form>
-            <!-- END: Form -->
+                <div class="nk-gap-1"></div>
+                <textarea
+                  class="form-control required"
+                  name="message"
+                  rows="6"
+                  placeholder="Your Comment"
+                  aria-required="true"></textarea>
+                <div class="nk-gap-1"></div>
+                <div class="nk-form-response-success"></div>
+                <div class="nk-form-response-error"></div>
+                <button class="nk-btn">Send Mail</button>
+              </form>
+              <!-- END: Form -->
+            </div>
           </div>
+          <div class="nk-gap-3"></div>
         </div>
-        <div class="nk-gap-5"></div>
       </div>
+
       <!-- END: Contact Info -->
+
+      <div class="whatsapp-float">
+        <a href="https://wa.me/+94784953634" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
 
       <!--
     START: Footer
@@ -596,7 +690,17 @@
             </div>
 
             <div class="nk-footer-text">
-              <p>2016 &copy; Design by Unvab. Code by nK</p>
+              <p class="mb-0">
+                &copy; 2025
+                <a href="index.html"><strong>CYAN</strong></a
+                >. All Rights Reserved.
+              </p>
+              <p>
+                Design by
+                <a href="https://sparkware-tech.github.io/portfolio/" target="_blank"
+                  ><strong>Sparkware</strong></a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -612,46 +716,22 @@
       role="dialog"
       aria-labelledby="exampleModalLongTitle"
       aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Social Meadia Design</h5>
-            <!-- Close button with cross icon -->
+            <h5 class="modal-title" id="modalTitle">Title</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" class="mt-5" /><img
-              src="assets/images/post-1-mid.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" /><img
-              src="assets/images/portfolio/cover-2.jpg"
-              alt=""
-              width="100%"
-              class="mt-5" />
+            <!-- Container for images -->
+            <div class="row">
+              <div class="col-lg-6 pl-0 pr-0" id="modalImagesRowOne"></div>
+              <div class="col-lg-6 pl-0 pr-0" id="modalImagesRowTwo"></div>
+            </div>
           </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
@@ -667,44 +747,82 @@
     <script src="assets/js/combined.js"></script>
 
     <script>
-      document.getElementById("toggleButton").addEventListener("click", function (event) {
-        event.preventDefault();
-        var content = document.getElementById("toggleContent");
-        if (content.style.display === "none" || content.style.display === "") {
-          content.style.display = "block"; // Show the content
-        } else {
-          content.style.display = "none"; // Hide the content
-        }
+      $(document).on("hidden.bs.modal", function (e) {
+        $("body").css("padding-right", "0");
       });
     </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const carousel = document.querySelector(".custom-carousel");
-        const carouselWrapper = document.querySelector(".custom-carousel-wrapper");
-        const totalWidth = carousel.scrollWidth; // Get the total width of the carousel
-        const itemCount = document.querySelectorAll(".custom-carousel-item").length; // Get the number of images
+    <script type="module">
+      // Function to load the appropriate constant file based on category
+      async function loadCategoryData(category) {
+        let categoryData;
+        try {
+          // Dynamically import the respective constant file based on category
+          if (category === "Flyers") {
+            const module = await import("./constants/flyers.js");
 
-        // Function to move the carousel
-        function moveCarousel() {
-          // Move the carousel to the left by the width of all items (totalWidth)
-          carousel.style.transform = `translateX(-${totalWidth / itemCount}px)`;
+            categoryData = module.flyers;
+          } else if (category === "Tute Covers") {
+            const module = await import("./constants/tute-covers.js");
+            categoryData = module.tuteCovers;
+          } else if (category === "Logoes") {
+            const module = await import("./constants/logoes.js");
+            categoryData = module.logoes;
+          } else if (category === "Baners") {
+            const module = await import("./constants/baners.js");
+            categoryData = module.baners;
+          } else if (category === "Handbills") {
+            const module = await import("./constants/handbills.js");
+            categoryData = module.handbills;
+          }
+        } catch (error) {
+          console.error("Error loading category data:", error);
         }
+        return categoryData;
+      }
 
-        // Initially move the carousel
-        moveCarousel();
+      // Listen for button clicks
+      document.querySelectorAll(".btn-blog-post").forEach((button) => {
+        button.addEventListener("click", async function () {
+          // Get the category from the clicked button
+          const category = this.getAttribute("data-title");
 
-        // After the transition ends, reset the position and start over
-        carousel.addEventListener("transitionend", function () {
-          // Reset the position of the carousel to the beginning
-          carousel.style.transition = "none"; // Disable transition temporarily
-          carousel.style.transform = "translateX(0)"; // Reset the position to the start
+          // Load the category data (images, title, description) from the constant file
+          const categoryData = await loadCategoryData(category);
 
-          // After a small delay, re-enable the transition and continue sliding
-          setTimeout(function () {
-            carousel.style.transition = "transform 5s linear"; // Re-enable transition
-            moveCarousel(); // Start the animation again
-          }, 50); // Small delay to ensure smooth reset
+          // Populate the modal with the corresponding data
+          if (categoryData) {
+            document.getElementById("modalTitle").innerText = categoryData.title;
+
+            // Clear previous images from both rows
+            const modalImagesRowOne = document.getElementById("modalImagesRowOne");
+            const modalImagesRowTwo = document.getElementById("modalImagesRowTwo");
+            modalImagesRowOne.innerHTML = "";
+            modalImagesRowTwo.innerHTML = "";
+
+            // Calculate the midpoint to divide images between two rows
+            const midPoint = Math.ceil(categoryData.images.length / 2);
+
+            // Populate the first half of images in the first row
+            for (let i = 0; i < midPoint; i++) {
+              const imgElement = document.createElement("img");
+              imgElement.src = categoryData.images[i];
+              imgElement.alt = `Image ${i + 1}`;
+              imgElement.className = "img-fluid p-1"; // Add responsive classes
+              imgElement.style.width = "100%";
+              modalImagesRowOne.appendChild(imgElement);
+            }
+
+            // Populate the second half of images in the second row
+            for (let i = midPoint; i < categoryData.images.length; i++) {
+              const imgElement = document.createElement("img");
+              imgElement.src = categoryData.images[i];
+              imgElement.alt = `Image ${i + 1}`;
+              imgElement.className = "img-fluid p-1 "; // Add responsive classes
+              imgElement.style.width = "100%";
+              modalImagesRowTwo.appendChild(imgElement);
+            }
+          }
         });
       });
     </script>
