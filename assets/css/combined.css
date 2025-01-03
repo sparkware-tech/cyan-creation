@@ -8093,6 +8093,7 @@ a:hover > .nk-icon-search:after {
 
 .contact ul li a {
   color: #00ffff;
+  transition: color 0.3s ease;
 }
 
 .contact ul li a:hover {
