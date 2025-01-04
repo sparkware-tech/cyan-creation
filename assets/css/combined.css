@@ -5789,7 +5789,6 @@ h4 {
 
   .nk-navbar-full .nk-nav-logo img {
     width: 70px;
-
   }
 }
 
@@ -6024,6 +6023,15 @@ h4 {
   padding-top: 75px;
   z-index: 0;
 }
+.nk-header-title .bg-image .bg {
+  background-image: url(../images/home.jpg);
+}
+@media (max-width: 798px) {
+  .nk-header-title .bg-image .bg {
+    background-image: url(../images/mobile-home.jpg);
+  }
+}
+
 .nk-header-title .nk-header-table {
   height: 370px;
 }
@@ -7005,7 +7013,6 @@ div.nk-error {
   display: inline-block;
   width: 20px;
   height: 18px;
-
 }
 
 .nk-icon-burger > span {
