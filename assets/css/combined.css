@@ -5774,6 +5774,25 @@ h4 {
 .nk-navbar .nk-nav-logo .nk-nav-logo-onscroll {
   display: none;
 }
+.nk-navbar .nk-nav-logo img {
+  width: 80px;
+  height: auto;
+}
+.nk-navbar-full .nk-nav-logo img {
+  width: 90px;
+  height: auto;
+}
+@media (max-width: 640px) {
+  .nk-navbar .nk-nav-logo img {
+    width: 60px;
+  }
+
+  .nk-navbar-full .nk-nav-logo img {
+    width: 70px;
+
+  }
+}
+
 .nk-navbar.nk-navbar-white-text-on-top .nk-nav > li > a {
   color: #bfbfbf;
 }
@@ -5819,11 +5838,7 @@ h4 {
 .nk-navbar .nk-drop-item.nk-drop-left .dropdown {
   margin-left: -100%;
 }
-.nk-navbar-overlay {
-  z-index: 1001;
-  background-color: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-}
+
 .nk-navbar-full,
 .nk-navbar-overlay {
   position: fixed;
@@ -5841,7 +5856,7 @@ h4 {
   z-index: 1002;
 }
 .nk-navbar-full .nk-nav-header {
-  padding: 33px 0;
+  padding: 20px 0 10px 0;
   margin-right: -22px;
 }
 .nk-navbar-full .nk-nav-header:after {
@@ -6115,8 +6130,8 @@ h4 {
   background-color: transparent;
 }
 .nk-footer .nk-footer-cont {
-  padding-top: 44px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .nk-footer .nk-footer-cont-sm {
   padding-top: 22px;
@@ -6990,8 +7005,9 @@ div.nk-error {
   display: inline-block;
   width: 20px;
   height: 18px;
-  color: #252525;
+
 }
+
 .nk-icon-burger > span {
   position: absolute;
   display: block;
