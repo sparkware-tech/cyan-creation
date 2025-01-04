@@ -3216,6 +3216,7 @@ a.bg-info:hover {
 .text-xs-center {
   text-align: center !important;
   color: #030241;
+  font-weight: 600;
 }
 @media (min-width: 576px) {
   .text-sm-left {
