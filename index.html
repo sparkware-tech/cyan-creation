@@ -39,6 +39,12 @@
         height: 100%; /* Set the content to take full height */
       }
 
+      .modal-title {
+        font-family: sans-serif;
+        font-weight: 600;
+        color: #030241;
+      }
+
       .modal-body {
         height: calc(100% - 56px); /* Adjust height considering the header height */
         overflow-y: auto; /* Add scroll if the content overflows */
@@ -58,8 +64,8 @@
 
       .custom-carousel {
         display: flex;
-        width: calc(200%);
-        animation: scroll 20s linear infinite;
+        width: calc(400%);
+        animation: scroll 50s linear infinite;
       }
 
       @keyframes scroll {
@@ -67,13 +73,13 @@
           transform: translateX(0);
         }
         100% {
-          transform: translateX(-50%); /* Scroll to hide 5 images */
+          transform: translateX(-100%); /* Scroll to hide 5 images */
         }
       }
 
       /* Each carousel item */
       .custom-carousel-item {
-        flex: 0 0 20%; /* Ensures 5 images are visible at once, 100% / 5 = 20% width each */
+        flex: 0 0 15%; /* Ensures 5 images are visible at once, 100% / 5 = 20% width each */
         padding: 3px 1px; /* Optional: Add padding to space out images */
       }
 
@@ -86,8 +92,8 @@
 
       .whatsapp-float {
         position: fixed;
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
         bottom: 20px;
         right: 20px;
         background-color: #25d366;
@@ -96,7 +102,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px;
+        transition: background-color 0.3s ease;
       }
 
       .whatsapp-float:hover {
@@ -104,7 +110,7 @@
       }
 
       .whatsapp-float a {
-        font-size: 32px;
+        font-size: 36px;
         color: white;
       }
 
@@ -125,8 +131,8 @@
         <div class="container">
           <div class="nk-nav-table">
             <a href="index.html" class="nk-nav-logo">
-              <img src="assets/images/logo_home.png" alt="" width="80" class="nk-nav-logo-onscroll" />
-              <img src="assets/images/logo_home_scroll.png" alt="" width="80" />
+              <img src="assets/images/logo_home.png" alt="" class="nk-nav-logo-onscroll" />
+              <img src="assets/images/logo_home_scroll.png" alt="" />
             </a>
 
             <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
@@ -162,16 +168,13 @@
     START: Navbar Mobile
 -->
     <nav class="nk-navbar nk-navbar-full nk-navbar-align-center" id="nk-nav-mobile">
-      <div class="nk-navbar-bg">
-        <div class="bg-image"></div>
-      </div>
       <div class="nk-nav-table">
         <div class="nk-nav-row">
           <div class="container">
             <div class="nk-nav-header">
               <div class="nk-nav-logo">
                 <a href="index.html" class="nk-nav-logo">
-                  <img src="assets/images/logo_bloom.gif" alt="" width="85" />
+                  <img src="assets/images/logo_bloom.gif" alt="" />
                 </a>
               </div>
 
@@ -199,10 +202,14 @@
             <div class="nk-nav-social">
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
+                    target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a>
+                  <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
                 </li>
               </ul>
             </div>
@@ -216,8 +223,7 @@
       <!-- START: Header Title -->
       <div class="nk-header-title nk-header-title-full">
         <div class="bg-image">
-          <div style="background-image: url('assets/images/home.jpg')"></div>
-          <div class="bg-image-overlay" style="background-color: rgba(12, 12, 12, 0.6)"></div>
+          <div class="bg"></div>
         </div>
         <div class="nk-header-table">
           <div class="nk-header-table-cell">
@@ -247,10 +253,10 @@
       <!-- END: Header Title -->
 
       <!-- START: About Our Agency -->
-      <div class="bg-white about pt-40" id="about">
-        <h1 class="title">Hi there!</h1>
-        <div class="row">
-          <div class="col-lg-7 col-md-9 col-sm-12 content">
+      <div class="about pt-40" id="about">
+        <div class="main-content">
+          <div class="content">
+            <h1 class="title">Hi there!</h1>
             <h4>About Me</h4>
             <p class="para-1">
               "My name is Kavinda Gayan, and I am the Senior Graphic Designer at CYAN Creations. I take pride
@@ -265,6 +271,7 @@
               to achieve remarkable outcomes."
             </p>
           </div>
+          <div class="profile-image"><img src="assets/images/about.png" alt="about" /></div>
         </div>
       </div>
 
@@ -311,6 +318,43 @@
               <div class="custom-carousel-item">
                 <img src="assets/images/artboard/Artboard 9.jpg" alt="enhance" class="custom-carousel-img" />
               </div>
+
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 1.jpg"
+                  alt="Social meadia"
+                  class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 2.jpg"
+                  alt="book cover"
+                  class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 3.jpg" alt="handbill" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 4.jpg" alt="thumnal" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 5.jpg" alt="logoes" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img
+                  src="assets/images/artboard/Artboard 6.jpg"
+                  alt="invitation"
+                  class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 7.jpg" alt="baner" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 8.jpg" alt="college" class="custom-carousel-img" />
+              </div>
+              <div class="custom-carousel-item">
+                <img src="assets/images/artboard/Artboard 9.jpg" alt="enhance" class="custom-carousel-img" />
+              </div>
             </div>
           </div>
         </div>
@@ -319,13 +363,11 @@
 
       <!-- START: Features -->
       <div class="nk-box bg-dark-1 text-white">
-        <div
-          class="bg-image bg-image-parallax"
-          style="background-image: url('assets/images/bg-pattern.jpg')"></div>
+        <div class="bg-image bg-image-parallax" style="background-color: #030241"></div>
         <div class="nk-gap-5 mnt-6"></div>
         <div class="container">
           <div class="row vertical-gap">
-            <div class="col-md-6 col-lg-3">
+            <div class="col-6 col-md-6 col-lg-3">
               <div class="nk-ibox-1">
                 <div class="nk-ibox-icon">
                   <span class="pe-7s-portfolio"></span>
@@ -336,7 +378,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-6 col-md-6 col-lg-3">
               <div class="nk-ibox-1">
                 <div class="nk-ibox-icon">
                   <span class="pe-7s-clock"></span>
@@ -347,7 +389,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-6 col-md-6 col-lg-3">
               <div class="nk-ibox-1">
                 <div class="nk-ibox-icon">
                   <span class="pe-7s-star"></span>
@@ -358,7 +400,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-6 col-md-6 col-lg-3">
               <div class="nk-ibox-1">
                 <div class="nk-ibox-icon">
                   <span class="pe-7s-like"></span>
@@ -401,7 +443,7 @@
         <div class="mt-25">
           <div class="container">
             <div class="row">
-              <div class="col-lg-12 pr-0 pl-0">
+              <div class="col-12 pr-0 pl-0">
                 <img src="assets/images/portfolio/cover.jpg" alt="" width="100%" class="p-1" />
               </div>
             </div>
@@ -409,7 +451,7 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-lg-12 pr-0 pl-0">
+              <div class="col-12 pr-0 pl-0">
                 <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" class="p-1" />
               </div>
             </div>
@@ -417,10 +459,10 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 pr-0 pl-0">
+              <div class="col-6 pr-0 pl-0">
                 <img src="assets/images/portfolio/shirt-1.jpg" alt="" width="100%" class="p-1" />
               </div>
-              <div class="col-lg-6 pr-0 pl-0">
+              <div class="col-6 pr-0 pl-0">
                 <img src="assets/images/portfolio/shirt-2.jpg" alt="" width="100%" class="p-1" />
               </div>
             </div>
@@ -428,10 +470,10 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 pr-0 pl-0">
+              <div class="col-6 pr-0 pl-0">
                 <img src="assets/images/portfolio/contact.jpg" alt="" width="100%" class="p-1" />
               </div>
-              <div class="col-lg-6 pr-0 pl-0">
+              <div class="col-6 pr-0 pl-0">
                 <img src="assets/images/portfolio/wallpaper.jpg" alt="" width="100%" class="p-1" />
               </div>
             </div>
@@ -439,7 +481,7 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-lg-12 pr-0 pl-0">
+              <div class="col-12 pr-0 pl-0">
                 <img src="assets/images/portfolio/baner.jpg" alt="" width="100%" class="p-1" />
               </div>
             </div>
@@ -447,10 +489,10 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 pr-0 pl-0">
+              <div class="col-6 pr-0 pl-0">
                 <img src="assets/images/portfolio/book-cover.jpg" alt="" width="100%" class="p-1" />
               </div>
-              <div class="col-lg-6 pr-0 pl-0">
+              <div class="col-6 pr-0 pl-0">
                 <img src="assets/images/portfolio/bag-cover.jpg" alt="" width="100%" class="p-1" />
               </div>
             </div>
@@ -458,10 +500,10 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 pr-0 pl-0">
+              <div class="col-6 pr-0 pl-0">
                 <img src="assets/images/portfolio/baner-2.jpg" alt="" width="100%" class="p-1" />
               </div>
-              <div class="col-lg-6 pr-0 pl-0">
+              <div class="col-6 pr-0 pl-0">
                 <img src="assets/images/portfolio/stiker.jpg" alt="" width="100%" class="p-1" />
                 <img src="assets/images/portfolio/card.jpg" alt="" width="100%" class="p-1" />
               </div>
@@ -470,7 +512,7 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-lg-12 pr-0 pl-0">
+              <div class="col-12 pr-0 pl-0">
                 <img src="assets/images/portfolio/thank-cover.jpg" alt="" width="100%" class="p-1" />
               </div>
             </div>
@@ -615,7 +657,11 @@
               <ul class="nk-contact-info">
                 <li>
                   <strong>Facebook :</strong
-                  ><a href="https://www.facebook.com" target="_blank">Cyan Creations</a>
+                  ><a
+                    href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
+                    target="_blank"
+                    >Cyan Creations</a
+                  >
                 </li>
                 <li>
                   <strong>Instergram :</strong>
@@ -680,11 +726,17 @@
             <div class="nk-footer-social">
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/unvabdesign/"><i class="fa fa-facebook"></i></a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
+                    target="_blank"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
                 </li>
 
                 <li>
-                  <a href="https://www.instagram.com/unvab/"><i class="fa fa-instagram"></i></a>
+                  <a href="https://www.instagram.com/unvab/" target="_blank"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
                 </li>
               </ul>
             </div>
@@ -727,8 +779,8 @@
           <div class="modal-body">
             <!-- Container for images -->
             <div class="row">
-              <div class="col-lg-6 pl-0 pr-0" id="modalImagesRowOne"></div>
-              <div class="col-lg-6 pl-0 pr-0" id="modalImagesRowTwo"></div>
+              <div class="col-6 pl-0 pr-0" id="modalImagesRowOne"></div>
+              <div class="col-6 pl-0 pr-0" id="modalImagesRowTwo"></div>
             </div>
           </div>
           <div class="modal-footer"></div>
