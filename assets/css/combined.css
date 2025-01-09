@@ -6147,6 +6147,7 @@ h4 {
 .nk-btn:hover {
   color: #fff;
   text-decoration: none;
+  outline: none;
 }
 .nk-btn.active,
 .nk-btn.hover,
