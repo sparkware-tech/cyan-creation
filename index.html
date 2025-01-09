@@ -577,7 +577,6 @@
             <div class="row vertical-gap">
               <div class="col-lg-5">
                 <h2 class="display-4 header">Contact Info</h2>
-           
 
                 <p>
                   "Have a project in mind or need assistance bringing your ideas to life? Feel free to reach
@@ -602,7 +601,9 @@
                     <strong>Instergram :</strong>
                     <a href="https://www.instagram.com" target="_blank">Cyan Creations</a>
                   </li>
-                  <li><strong>Email :</strong> <a href="mailto:cyan@gmail.com">cyancreation2.0lu@gmail.com</a></li>
+                  <li>
+                    <strong>Email :</strong> <a href="mailto:cyan@gmail.com">cyancreations2.0@gmail.com</a>
+                  </li>
                   <li>
                     <strong>WhatsApp No :</strong>
                     <a href="https://wa.me/+94784953634" target="_blank">+94 495 3634</a>
@@ -610,22 +611,33 @@
                 </ul>
               </div>
               <div class="col-lg-7">
-                <form action="#" class="nk-form nk-form-ajax pt-20">
+                <form id="contact-form" class="nk-form nk-form-ajax pt-20">
                   <div class="row vertical-gap">
                     <div class="col-md-6">
-                      <input type="text" class="form-control required" name="name" placeholder="Your Name" />
+                      <input
+                        type="text"
+                        class="form-control required"
+                        name="name"
+                        placeholder="Your Name"
+                        required="" />
                     </div>
                     <div class="col-md-6">
                       <input
                         type="email"
                         class="form-control required"
                         name="email"
-                        placeholder="Your Email" />
+                        placeholder="Your Email"
+                        required="" />
                     </div>
                   </div>
 
                   <div class="nk-gap-1"></div>
-                  <input type="text" class="form-control required" name="title" placeholder="Your Title" />
+                  <input
+                    type="text"
+                    class="form-control required"
+                    name="subject"
+                    placeholder="Your Title"
+                    required="" />
 
                   <div class="nk-gap-1"></div>
                   <textarea
@@ -633,11 +645,15 @@
                     name="message"
                     rows="4"
                     placeholder="Your Comment"
-                    aria-required="true"></textarea>
+                    aria-required="true"
+                    required=""></textarea>
                   <div class="nk-gap-1"></div>
-                  <div class="nk-form-response-success"></div>
-                  <div class="nk-form-response-error"></div>
-                  <button class="nk-btn">Send Mail</button>
+                  <div class="loading">Loading</div>
+                  <div class="error-message">
+                    Your message could not be sent. Please try again later.
+                  </div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <button class="nk-btn" type="submit">Send Mail</button>
                 </form>
               </div>
             </div>
@@ -683,7 +699,9 @@
                 </p>
                 <p class="mb-0 design-by">
                   Design by
-                  <a href="https://sparkware-tech.github.io/portfolio/" target="_blank"><strong>Sparkware</strong></a>
+                  <a href="https://sparkware-tech.github.io/portfolio/" target="_blank"
+                    ><strong>Sparkware</strong></a
+                  >
                 </p>
               </div>
             </div>
@@ -728,6 +746,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script src="assets/js/combined.js"></script>
 
@@ -838,6 +857,8 @@
         });
       });
     </script>
+
+    <script src="assets/js/email.js"></script>
     <!-- END: Scripts -->
   </body>
 </html>

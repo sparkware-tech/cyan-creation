@@ -8030,6 +8030,56 @@ a:hover > .nk-icon-search:after {
   color: #54c3c3;
 }
 
+.contact .loading {
+  display: none;
+  background: #3734e4;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.contact .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #030241;
+  border-top-color: #00ffff;
+  animation: form-loading 1s linear infinite;
+}
+
+@keyframes form-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contact .error-message {
+  display: none;
+  background: #df1529;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.contact .sent-message {
+  display: none;
+  color: white;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
 /*About*/
 .about-content {
   height: auto;
