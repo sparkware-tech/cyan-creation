@@ -8384,8 +8384,8 @@ a:hover > .nk-icon-search:after {
 .whatsapp-float a {
   font-size: 32px;
   color: #fff;
-  padding-top: 4px;
-  padding-left: 0.2px;
+  padding-top: 4.1px;
+  padding-left: 1px;
 }
 
 .whatsapp-float a:hover {
