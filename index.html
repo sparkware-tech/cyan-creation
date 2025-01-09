@@ -6,797 +6,755 @@
 
     <title>Cyan</title>
 
-    <meta name="description" content="Snow - Clean & Minimal Portfolio HTML template." />
-    <meta name="keywords" content="portfolio, clean, minimal, blog, template, portfolio website" />
-    <meta name="author" content="nK" />
+    <meta
+      name="description"
+      content="Welcome to my graphic design portfolio, a curated collection of my creative journey and passion for design. Here, you'll find a variety of projects that showcase my skills in crafting visually compelling and impactful designs. Each piece reflects my dedication to creativity, attention to detail, and commitment to delivering meaningful visual solutions." />
+    <meta name="keywords" content="portfolio, grapics" />
+    <meta name="author" content="Sparkware" />
 
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- START: Styles -->
-
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700"
       rel="stylesheet"
       type="text/css" />
-
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet" />
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/combined.css" />
-
-    <style>
-      .modal-dialog {
-        max-width: 95% !important;
-        margin: 0;
-        height: 90vh;
-      }
-
-      .modal-content {
-        height: 100%; /* Set the content to take full height */
-      }
-
-      .modal-title {
-        font-family: sans-serif;
-        font-weight: 600;
-        color: #030241;
-      }
-
-      .modal-body {
-        height: calc(100% - 56px); /* Adjust height considering the header height */
-        overflow-y: auto; /* Add scroll if the content overflows */
-      }
-
-      /* Outer container of the carousel */
-      .custom-carousel-container {
-        width: 100%; /* Make it full width of the parent container */
-        overflow: hidden; /* Hide any overflow from the moving carousel */
-      }
-
-      /* Wrapper around the carousel to handle its width */
-      .custom-carousel-wrapper {
-        display: flex; /* Use flex to arrange items horizontally */
-        width: 100%; /* Full width */
-      }
-
-      .custom-carousel {
-        display: flex;
-        width: calc(400%);
-        animation: scroll 50s linear infinite;
-      }
-
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%); /* Scroll to hide 5 images */
-        }
-      }
-
-      /* Each carousel item */
-      .custom-carousel-item {
-        flex: 0 0 15%; /* Ensures 5 images are visible at once, 100% / 5 = 20% width each */
-        padding: 3px 1px; /* Optional: Add padding to space out images */
-      }
-
-      /* Image inside each carousel item */
-      .custom-carousel-img {
-        width: 100%; /* Ensure image takes up full item width */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure images are cropped if necessary */
-      }
-
-      .whatsapp-float {
-        position: fixed;
-        width: 45px;
-        height: 45px;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366;
-        border-radius: 50%;
-        z-index: 100;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s ease;
-      }
-
-      .whatsapp-float:hover {
-        background-color: #189c48;
-      }
-
-      .whatsapp-float a {
-        font-size: 36px;
-        color: white;
-      }
-
-      .whatsapp-float a:hover {
-        color: white;
-      }
-    </style>
-
-    <!-- END: Styles -->
   </head>
 
   <body>
-    <header class="nk-header">
-      <!--
-        START: Navbar
-    -->
-      <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top">
-        <div class="container">
-          <div class="nk-nav-table">
-            <a href="index.html" class="nk-nav-logo">
-              <img src="assets/images/logo_home.png" alt="" class="nk-nav-logo-onscroll" />
-              <img src="assets/images/logo_home_scroll.png" alt="" />
-            </a>
+    <div id="preloader"></div>
 
-            <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
-              <li>
-                <a href="index.html#about">About</a>
-              </li>
-              <li>
-                <a href="index.html#portfolio">Portfolio</a>
-              </li>
-              <li>
-                <a href="index.html#contact">Contact</a>
-              </li>
-            </ul>
-
-            <ul class="nk-nav nk-nav-right nk-nav-icons">
-              <li class="single-icon hidden-lg-up">
-                <a href="#" class="nk-navbar-full-toggle">
-                  <span class="nk-icon-burger">
-                    <span class="nk-t-1"></span>
-                    <span class="nk-t-2"></span>
-                    <span class="nk-t-3"></span>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- END: Navbar -->
-    </header>
-
-    <!--
-    START: Navbar Mobile
--->
-    <nav class="nk-navbar nk-navbar-full nk-navbar-align-center" id="nk-nav-mobile">
-      <div class="nk-nav-table">
-        <div class="nk-nav-row">
+    <div id="body-content">
+      <header class="nk-header">
+        <!-- START: Navbar -->
+        <nav
+          class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top"
+          aria-label="Main Navigation">
           <div class="container">
-            <div class="nk-nav-header">
-              <div class="nk-nav-logo">
-                <a href="index.html" class="nk-nav-logo">
-                  <img src="assets/images/logo_bloom.gif" alt="" />
-                </a>
-              </div>
+            <div class="nk-nav-table">
+              <a href="index.html" class="nk-nav-logo">
+                <img src="assets/images/logo_home.png" alt="logo_home" class="nk-nav-logo-onscroll" />
+                <img src="assets/images/logo_home_scroll.png" alt="logo_home_scroll" />
+              </a>
 
-              <div class="nk-nav-close nk-navbar-full-toggle">
-                <span class="nk-icon-close"></span>
-              </div>
+              <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
+                <li>
+                  <a href="index.html#about">About</a>
+                </li>
+                <li>
+                  <a href="index.html#portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a href="index.html#contact">Contact</a>
+                </li>
+              </ul>
+
+              <ul class="nk-nav nk-nav-right nk-nav-icons">
+                <li class="single-icon hidden-lg-up">
+                  <a href="#" class="nk-navbar-full-toggle">
+                    <span class="nk-icon-burger">
+                      <span class="nk-t-1"></span>
+                      <span class="nk-t-2"></span>
+                      <span class="nk-t-3"></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-        <div class="nk-nav-row-full nk-nav-row">
-          <div class="nano">
-            <div class="nano-content">
-              <div class="nk-nav-table">
-                <div class="nk-nav-row nk-nav-row-full nk-nav-row-center nk-navbar-mobile-content">
-                  <ul class="nk-nav">
-                    <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
+        </nav>
+        <!-- END: Navbar -->
+
+        <!-- START: Navbar Mobile -->
+        <nav
+          class="nk-navbar nk-navbar-full nk-navbar-align-center"
+          id="nk-nav-mobile"
+          aria-label="Mobile Navigation">
+          <div class="nk-nav-table">
+            <div class="nk-nav-row">
+              <div class="container">
+                <div class="nk-nav-header">
+                  <div class="nk-nav-logo">
+                    <a href="index.html" class="nk-nav-logo">
+                      <img src="assets/images/logo_bloom.gif" alt="logo_bloom" />
+                    </a>
+                  </div>
+
+                  <div class="nk-nav-close nk-navbar-full-toggle">
+                    <span class="nk-icon-close"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nk-nav-row-full nk-nav-row">
+              <div class="nano">
+                <div class="nano-content">
+                  <div class="nk-nav-table">
+                    <div class="nk-nav-row nk-nav-row-full nk-nav-row-center nk-navbar-mobile-content">
+                      <ul class="nk-nav">
+                        <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nk-nav-row">
+              <div class="container">
+                <div class="nk-nav-social">
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
+                        target="_blank"
+                        ><i class="fa fa-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
+        </nav>
+        <!-- END: Navbar Mobile -->
+      </header>
+
+      <div class="nk-main">
+        <!-- START: Home -->
+        <div class="nk-header-title nk-header-title-full">
+          <div class="bg-image">
+            <div class="bg"></div>
+          </div>
+          <div class="nk-header-table">
+            <div class="nk-header-table-cell">
+              <div class="container">
+                <div class="nk-header-table-cell-logo">
+                  <img src="assets/images/logo_bloom.gif" alt="logo_home" />
+                  <h1 class="tagline">WHERE IDEAS BLOOM</h1>
+                </div>
+
+                <div class="nk-gap"></div>
+                <div class="nk-header-text text-white">
+                  <div class="nk-gap-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <a class="nk-header-title-scroll-down text-white" href="#nk-header-title-scroll-down">
+              <span class="pe-7s-angle-down"></span>
+            </a>
+          </div>
         </div>
-        <div class="nk-nav-row">
+
+        <div id="nk-header-title-scroll-down"></div>
+        <!-- END: Home -->
+
+        <!-- START: About -->
+        <div class="about-content">
+          <div class="about pt-40" id="about">
+            <div class="main-content">
+              <div class="content">
+                <h1 class="title">Hi there!</h1>
+                <h4>About Me</h4>
+                <p class="para-1">
+                  "My name is Kavinda Gayan, and I am the Senior Graphic Designer at CYAN Creations. I take
+                  pride in being a creative, approachable, and passionate professional dedicated to crafting
+                  compelling and innovative designs. With a knack for thinking outside the box, I thrive on
+                  generating unique ideas that inspire and captivate.
+                </p>
+                <p class="para-2">
+                  Here, I showcase some of my designs - each a testament to my commitment, effort, and
+                  enthusiasm for the craft. I am driven to continually expand my skills and gain new
+                  experiences to elevate my work further. Together, let’s collaborate, share ideas, and push
+                  the boundaries of creativity to achieve remarkable outcomes."
+                </p>
+              </div>
+              <div class="profile-image"><img src="assets/images/about.png" alt="about" /></div>
+            </div>
+          </div>
+        </div>
+        <!-- END: About -->
+
+        <!-- START: Services -->
+        <div class="bg-white">
+          <div class="custom-carousel-container">
+            <div class="custom-carousel-wrapper">
+              <div class="custom-carousel">
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 1.jpg"
+                    alt="Social meadia"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 2.jpg"
+                    alt="book cover"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 3.jpg"
+                    alt="handbill"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 4.jpg"
+                    alt="thumnal"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img src="assets/images/artboard/Artboard 5.jpg" alt="logoes" class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 6.jpg"
+                    alt="invitation"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img src="assets/images/artboard/Artboard 7.jpg" alt="baner" class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 8.jpg"
+                    alt="college"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 9.jpg"
+                    alt="enhance"
+                    class="custom-carousel-img" />
+                </div>
+
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 1.jpg"
+                    alt="Social meadia"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 2.jpg"
+                    alt="book cover"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 3.jpg"
+                    alt="handbill"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 4.jpg"
+                    alt="thumnal"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img src="assets/images/artboard/Artboard 5.jpg" alt="logoes" class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 6.jpg"
+                    alt="invitation"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img src="assets/images/artboard/Artboard 7.jpg" alt="baner" class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 8.jpg"
+                    alt="college"
+                    class="custom-carousel-img" />
+                </div>
+                <div class="custom-carousel-item">
+                  <img
+                    src="assets/images/artboard/Artboard 9.jpg"
+                    alt="enhance"
+                    class="custom-carousel-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END: Services -->
+
+        <!-- START: Features -->
+        <div class="nk-box bg-dark-1 text-white">
+          <div class="bg-image bg-image-parallax" style="background-color: #030241"></div>
+          <div class="nk-gap-5 mnt-6"></div>
           <div class="container">
-            <div class="nk-nav-social">
-              <ul>
-                <li>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
-                    target="_blank"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
-                </li>
-              </ul>
+            <div class="row vertical-gap">
+              <div class="col-6 col-md-6 col-lg-3">
+                <div class="nk-ibox-1">
+                  <div class="nk-ibox-icon">
+                    <span class="pe-7s-portfolio"></span>
+                  </div>
+                  <div class="nk-ibox-cont">
+                    <div class="nk-ibox-title">548</div>
+                    <div class="nk-ibox-text">Projects Completed</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 col-lg-3">
+                <div class="nk-ibox-1">
+                  <div class="nk-ibox-icon">
+                    <span class="pe-7s-clock"></span>
+                  </div>
+                  <div class="nk-ibox-cont">
+                    <div class="nk-ibox-title">1465</div>
+                    <div class="nk-ibox-text">Working Hours</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 col-lg-3">
+                <div class="nk-ibox-1">
+                  <div class="nk-ibox-icon">
+                    <span class="pe-7s-star"></span>
+                  </div>
+                  <div class="nk-ibox-cont">
+                    <div class="nk-ibox-title">612</div>
+                    <div class="nk-ibox-text">Positive Feedbacks</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6 col-lg-3">
+                <div class="nk-ibox-1">
+                  <div class="nk-ibox-icon">
+                    <span class="pe-7s-like"></span>
+                  </div>
+                  <div class="nk-ibox-cont">
+                    <div class="nk-ibox-title">735</div>
+                    <div class="nk-ibox-text">Happy Clients</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="nk-gap-5 mnt-6"></div>
         </div>
-      </div>
-    </nav>
-    <!-- END: Navbar Mobile -->
+        <!-- END: Features -->
 
-    <div class="nk-main">
-      <!-- START: Header Title -->
-      <div class="nk-header-title nk-header-title-full">
-        <div class="bg-image">
-          <div class="bg"></div>
-        </div>
-        <div class="nk-header-table">
-          <div class="nk-header-table-cell">
+        <!-- START: Portfolio -->
+        <div class="nk-box bg-gray-1 pt-70" id="portfolio">
+          <h2 class="text-xs-center display-4 header">PORTFOLIO</h2>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="text-xs-center">
+                  "Welcome to my graphic design portfolio, a curated collection of my creative journey and
+                  passion for design. Here, you'll find a variety of projects that showcase my skills in
+                  crafting visually compelling and impactful designs. Each piece reflects my dedication to
+                  creativity, attention to detail, and commitment to delivering meaningful visual solutions.
+                </div>
+                <div class="text-xs-center mt-2">
+                  From branding to digital art, these works are a testament to my versatility and love for
+                  design. I invite you to explore and discover how I bring ideas to life through bold
+                  concepts, innovative thinking, and a keen eye for aesthetics. Let’s create something
+                  extraordinary together."
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-25">
             <div class="container">
-              <div class="nk-header-table-cell-logo">
-                <img src="assets/images/logo_bloom.gif" alt="logo_home" />
-                <h1 class="tagline">WHERE IDEAS BLOOM</h1>
-              </div>
-
-              <div class="nk-gap"></div>
-              <div class="nk-header-text text-white">
-                <div class="nk-gap-4"></div>
+              <div class="row">
+                <div class="col-12 pr-0 pl-0">
+                  <img src="assets/images/portfolio/cover.jpg" alt="" width="100%" class="p-1" />
+                </div>
               </div>
             </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-12 pr-0 pl-0">
+                  <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" class="p-1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-6 pr-0 pl-0">
+                  <img src="assets/images/portfolio/shirt-1.jpg" alt="" width="100%" class="p-1" />
+                </div>
+                <div class="col-6 pr-0 pl-0">
+                  <img src="assets/images/portfolio/shirt-2.jpg" alt="" width="100%" class="p-1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-6 pr-0 pl-0">
+                  <img src="assets/images/portfolio/contact.jpg" alt="" width="100%" class="p-1" />
+                </div>
+                <div class="col-6 pr-0 pl-0">
+                  <img src="assets/images/portfolio/wallpaper.jpg" alt="" width="100%" class="p-1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-12 pr-0 pl-0">
+                  <img src="assets/images/portfolio/baner.jpg" alt="" width="100%" class="p-1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-6 pr-0 pl-0">
+                  <img src="assets/images/portfolio/book-cover.jpg" alt="" width="100%" class="p-1" />
+                </div>
+                <div class="col-6 pr-0 pl-0">
+                  <img src="assets/images/portfolio/bag-cover.jpg" alt="" width="100%" class="p-1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-6 pr-0 pl-0">
+                  <img src="assets/images/portfolio/baner-2.jpg" alt="" width="100%" class="p-1" />
+                </div>
+                <div class="col-6 pr-0 pl-0">
+                  <img src="assets/images/portfolio/stiker.jpg" alt="" width="100%" class="p-1" />
+                  <img src="assets/images/portfolio/card.jpg" alt="" width="100%" class="p-1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-12 pr-0 pl-0">
+                  <img src="assets/images/portfolio/thank-cover.jpg" alt="" width="100%" class="p-1" />
+                </div>
+              </div>
+            </div>
+
+            <div class="nk-gap-2"></div>
+          </div>
+
+          <div class="container">
+            <!-- START: Carousel -->
+            <div
+              class="nk-carousel-2 nk-carousel-x2 nk-carousel-no-margin nk-carousel-all-visible nk-blog-isotope"
+              data-dots="true">
+              <div class="nk-carousel-inner">
+                <div>
+                  <div>
+                    <div class="pl-15 pr-15">
+                      <div class="nk-blog-post">
+                        <div class="nk-post-thumb">
+                          <button
+                            type="button"
+                            class="btn-blog-post"
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
+                            data-title="Logoes">
+                            <img
+                              src="assets/images/portfolio/Logo Design.jpg"
+                              alt=""
+                              class="nk-img-stretch" />
+                          </button>
+                          <div class="nk-post-category"><p>Logoes</p></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nk-gap-1"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="pl-15 pr-15">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <button
+                          type="button"
+                          class="btn-blog-post"
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          data-title="Tute Covers">
+                          <img src="assets/images/portfolio/tute cover.jpg" alt="" class="nk-img-stretch" />
+                        </button>
+                        <div class="nk-post-category"><p>Tute Covers</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
+
+                <div>
+                  <div>
+                    <div class="pl-15 pr-15">
+                      <div class="nk-blog-post">
+                        <div class="nk-post-thumb">
+                          <button
+                            type="button"
+                            class="btn-blog-post"
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
+                            data-title="Baners">
+                            <img src="assets/images/portfolio/Banner.jpg" alt="" class="nk-img-stretch" />
+                          </button>
+                          <div class="nk-post-category"><p>Baners</p></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nk-gap-1"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div>
+                    <div class="pl-15 pr-15">
+                      <div class="nk-blog-post">
+                        <div class="nk-post-thumb">
+                          <button
+                            type="button"
+                            class="btn-blog-post"
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
+                            data-title="Handbills">
+                            <img src="assets/images/portfolio/Handbill.jpg" alt="" class="nk-img-stretch" />
+                          </button>
+                          <div class="nk-post-category"><p>Handbills</p></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nk-gap-1"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="pl-15 pr-15">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <button
+                          type="button"
+                          class="btn-blog-post"
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          data-title="Flyers">
+                          <img src="assets/images/portfolio/Flyer.jpg" alt="Flyers" class="nk-img-stretch" />
+                        </button>
+                        <div class="nk-post-category"><p>Flyers</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
+              </div>
+            </div>
+            <!-- END: Carousel -->
+          </div>
+          <div class="nk-gap-5"></div>
+        </div>
+        <!-- END: Portfolio -->
+
+        <!-- START: Contact Info -->
+        <div class="contact">
+          <div class="container pt-80 contact" id="contact">
+            <div class="row vertical-gap">
+              <div class="col-lg-5">
+                <h2 class="display-4 header">Contact Info</h2>
+
+                <p>
+                  "Have a project in mind or need assistance bringing your ideas to life? Feel free to reach
+                  out! I'm always open to new opportunities, collaborations, or simply connecting with fellow
+                  creatives. Let’s discuss how we can work together to create something exceptional.
+                </p>
+
+                <p>
+                  You can contact me through the details provided below - I look forward to hearing from you!"
+                </p>
+
+                <ul class="nk-contact-info">
+                  <li>
+                    <strong>Facebook :</strong
+                    ><a
+                      href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
+                      target="_blank"
+                      >Cyan Creations</a
+                    >
+                  </li>
+                  <li>
+                    <strong>Instergram :</strong>
+                    <a href="https://www.instagram.com" target="_blank">Cyan Creations</a>
+                  </li>
+                  <li>
+                    <strong>Email :</strong> <a href="mailto:cyan@gmail.com">cyancreations2.0@gmail.com</a>
+                  </li>
+                  <li>
+                    <strong>WhatsApp No :</strong>
+                    <a href="https://wa.me/+94784953634" target="_blank">+94 495 3634</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-7">
+                <form id="contact-form" class="nk-form nk-form-ajax pt-20">
+                  <div class="row vertical-gap">
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control required"
+                        name="name"
+                        placeholder="Your Name"
+                        required="" />
+                    </div>
+                    <div class="col-md-6">
+                      <input
+                        type="email"
+                        class="form-control required"
+                        name="email"
+                        placeholder="Your Email"
+                        required="" />
+                    </div>
+                  </div>
+
+                  <div class="nk-gap-1"></div>
+                  <input
+                    type="text"
+                    class="form-control required"
+                    name="subject"
+                    placeholder="Your Title"
+                    required="" />
+
+                  <div class="nk-gap-1"></div>
+                  <textarea
+                    class="form-control required"
+                    name="message"
+                    rows="4"
+                    placeholder="Your Comment"
+                    aria-required="true"
+                    required=""></textarea>
+                  <div class="nk-gap-1"></div>
+                  <div class="loading">Loading</div>
+                  <div class="error-message">
+                    Your message could not be sent. Please try again later.
+                  </div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <button class="nk-btn" type="submit">Send Mail</button>
+                </form>
+              </div>
+            </div>
+            <div class="nk-gap-3"></div>
           </div>
         </div>
+        <!-- END: Contact Info -->
 
-        <div>
-          <a class="nk-header-title-scroll-down text-white" href="#nk-header-title-scroll-down">
-            <span class="pe-7s-angle-down"></span>
+        <!-- START: Whatsapp -->
+        <div class="whatsapp-float">
+          <a href="https://wa.me/+94784953634" target="_blank">
+            <i class="fab fa-whatsapp"></i>
           </a>
         </div>
-      </div>
+        <!-- START: Whatsapp -->
 
-      <div id="nk-header-title-scroll-down"></div>
+        <!-- START: Footer -->
+        <footer class="nk-footer">
+          <div class="nk-footer-cont">
+            <div class="container text-xs-center">
+              <div class="nk-footer-social">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
+                      target="_blank"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
 
-      <!-- END: Header Title -->
-
-      <!-- START: About Our Agency -->
-      <div class="about pt-40" id="about">
-        <div class="main-content">
-          <div class="content">
-            <h1 class="title">Hi there!</h1>
-            <h4>About Me</h4>
-            <p class="para-1">
-              "My name is Kavinda Gayan, and I am the Senior Graphic Designer at CYAN Creations. I take pride
-              in being a creative, approachable, and passionate professional dedicated to crafting compelling
-              and innovative designs. With a knack for thinking outside the box, I thrive on generating unique
-              ideas that inspire and captivate.
-            </p>
-            <p class="para-2">
-              Here, I showcase some of my designs - each a testament to my commitment, effort, and enthusiasm
-              for the craft. I am driven to continually expand my skills and gain new experiences to elevate
-              my work further. Together, let’s collaborate, share ideas, and push the boundaries of creativity
-              to achieve remarkable outcomes."
-            </p>
-          </div>
-          <div class="profile-image"><img src="assets/images/about.png" alt="about" /></div>
-        </div>
-      </div>
-
-      <!-- END: About Our Agency -->
-
-      <!-- START: Partners -->
-      <div class="bg-white">
-        <div class="custom-carousel-container">
-          <div class="custom-carousel-wrapper">
-            <div class="custom-carousel">
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 1.jpg"
-                  alt="Social meadia"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 2.jpg"
-                  alt="book cover"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 3.jpg" alt="handbill" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 4.jpg" alt="thumnal" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 5.jpg" alt="logoes" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 6.jpg"
-                  alt="invitation"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 7.jpg" alt="baner" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 8.jpg" alt="college" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 9.jpg" alt="enhance" class="custom-carousel-img" />
+                  <li>
+                    <a href="https://www.instagram.com/unvab/" target="_blank"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
               </div>
 
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 1.jpg"
-                  alt="Social meadia"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 2.jpg"
-                  alt="book cover"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 3.jpg" alt="handbill" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 4.jpg" alt="thumnal" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 5.jpg" alt="logoes" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img
-                  src="assets/images/artboard/Artboard 6.jpg"
-                  alt="invitation"
-                  class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 7.jpg" alt="baner" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 8.jpg" alt="college" class="custom-carousel-img" />
-              </div>
-              <div class="custom-carousel-item">
-                <img src="assets/images/artboard/Artboard 9.jpg" alt="enhance" class="custom-carousel-img" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END: Partners -->
-
-      <!-- START: Features -->
-      <div class="nk-box bg-dark-1 text-white">
-        <div class="bg-image bg-image-parallax" style="background-color: #030241"></div>
-        <div class="nk-gap-5 mnt-6"></div>
-        <div class="container">
-          <div class="row vertical-gap">
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="nk-ibox-1">
-                <div class="nk-ibox-icon">
-                  <span class="pe-7s-portfolio"></span>
-                </div>
-                <div class="nk-ibox-cont">
-                  <div class="nk-ibox-title">548</div>
-                  <div class="nk-ibox-text">Projects Completed</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="nk-ibox-1">
-                <div class="nk-ibox-icon">
-                  <span class="pe-7s-clock"></span>
-                </div>
-                <div class="nk-ibox-cont">
-                  <div class="nk-ibox-title">1465</div>
-                  <div class="nk-ibox-text">Working Hours</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="nk-ibox-1">
-                <div class="nk-ibox-icon">
-                  <span class="pe-7s-star"></span>
-                </div>
-                <div class="nk-ibox-cont">
-                  <div class="nk-ibox-title">612</div>
-                  <div class="nk-ibox-text">Positive Feedbacks</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-6 col-lg-3">
-              <div class="nk-ibox-1">
-                <div class="nk-ibox-icon">
-                  <span class="pe-7s-like"></span>
-                </div>
-                <div class="nk-ibox-cont">
-                  <div class="nk-ibox-title">735</div>
-                  <div class="nk-ibox-text">Happy Clients</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nk-gap-5 mnt-6"></div>
-      </div>
-      <!-- END: Features -->
-
-      <!-- START: Portfolio -->
-      <div class="nk-box bg-gray-1 pt-70" id="portfolio">
-        <h2 class="text-xs-center display-4 header">PORTFOLIO</h2>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="text-xs-center">
-                "Welcome to my graphic design portfolio, a curated collection of my creative journey and
-                passion for design. Here, you'll find a variety of projects that showcase my skills in
-                crafting visually compelling and impactful designs. Each piece reflects my dedication to
-                creativity, attention to detail, and commitment to delivering meaningful visual solutions.
-              </div>
-              <div class="text-xs-center mt-2">
-                From branding to digital art, these works are a testament to my versatility and love for
-                design. I invite you to explore and discover how I bring ideas to life through bold concepts,
-                innovative thinking, and a keen eye for aesthetics. Let’s create something
-                extraordinary together."
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-25">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 pr-0 pl-0">
-                <img src="assets/images/portfolio/cover.jpg" alt="" width="100%" class="p-1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-12 pr-0 pl-0">
-                <img src="assets/images/portfolio/cover-2.jpg" alt="" width="100%" class="p-1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-6 pr-0 pl-0">
-                <img src="assets/images/portfolio/shirt-1.jpg" alt="" width="100%" class="p-1" />
-              </div>
-              <div class="col-6 pr-0 pl-0">
-                <img src="assets/images/portfolio/shirt-2.jpg" alt="" width="100%" class="p-1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-6 pr-0 pl-0">
-                <img src="assets/images/portfolio/contact.jpg" alt="" width="100%" class="p-1" />
-              </div>
-              <div class="col-6 pr-0 pl-0">
-                <img src="assets/images/portfolio/wallpaper.jpg" alt="" width="100%" class="p-1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-12 pr-0 pl-0">
-                <img src="assets/images/portfolio/baner.jpg" alt="" width="100%" class="p-1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-6 pr-0 pl-0">
-                <img src="assets/images/portfolio/book-cover.jpg" alt="" width="100%" class="p-1" />
-              </div>
-              <div class="col-6 pr-0 pl-0">
-                <img src="assets/images/portfolio/bag-cover.jpg" alt="" width="100%" class="p-1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-6 pr-0 pl-0">
-                <img src="assets/images/portfolio/baner-2.jpg" alt="" width="100%" class="p-1" />
-              </div>
-              <div class="col-6 pr-0 pl-0">
-                <img src="assets/images/portfolio/stiker.jpg" alt="" width="100%" class="p-1" />
-                <img src="assets/images/portfolio/card.jpg" alt="" width="100%" class="p-1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-12 pr-0 pl-0">
-                <img src="assets/images/portfolio/thank-cover.jpg" alt="" width="100%" class="p-1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="nk-gap-2"></div>
-        </div>
-
-        <div class="container">
-          <!-- START: Carousel -->
-          <div
-            class="nk-carousel-2 nk-carousel-x2 nk-carousel-no-margin nk-carousel-all-visible nk-blog-isotope"
-            data-dots="true">
-            <div class="nk-carousel-inner">
-              <div>
-                <div>
-                  <div class="pl-15 pr-15">
-                    <div class="nk-blog-post">
-                      <div class="nk-post-thumb">
-                        <button
-                          type="button"
-                          class="btn-blog-post"
-                          data-toggle="modal"
-                          data-target="#exampleModalLong"
-                          data-title="Logoes">
-                          <img src="assets/images/portfolio/Logo Design.jpg" alt="" class="nk-img-stretch" />
-                        </button>
-                        <div class="nk-post-category"><p>Logoes</p></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nk-gap-1"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="pl-15 pr-15">
-                  <div class="nk-blog-post">
-                    <div class="nk-post-thumb">
-                      <button
-                        type="button"
-                        class="btn-blog-post"
-                        data-toggle="modal"
-                        data-target="#exampleModalLong"
-                        data-title="Tute Covers">
-                        <img src="assets/images/portfolio/tute cover.jpg" alt="" class="nk-img-stretch" />
-                      </button>
-                      <div class="nk-post-category"><p>Tute Covers</p></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="nk-gap-1"></div>
-              </div>
-
-              <div>
-                <div>
-                  <div class="pl-15 pr-15">
-                    <div class="nk-blog-post">
-                      <div class="nk-post-thumb">
-                        <button
-                          type="button"
-                          class="btn-blog-post"
-                          data-toggle="modal"
-                          data-target="#exampleModalLong"
-                          data-title="Baners">
-                          <img src="assets/images/portfolio/Banner.jpg" alt="" class="nk-img-stretch" />
-                        </button>
-                        <div class="nk-post-category"><p>Baners</p></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nk-gap-1"></div>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <div class="pl-15 pr-15">
-                    <div class="nk-blog-post">
-                      <div class="nk-post-thumb">
-                        <button
-                          type="button"
-                          class="btn-blog-post"
-                          data-toggle="modal"
-                          data-target="#exampleModalLong"
-                          data-title="Handbills">
-                          <img src="assets/images/portfolio/Handbill.jpg" alt="" class="nk-img-stretch" />
-                        </button>
-                        <div class="nk-post-category"><p>Handbills</p></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="nk-gap-1"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="pl-15 pr-15">
-                  <div class="nk-blog-post">
-                    <div class="nk-post-thumb">
-                      <button
-                        type="button"
-                        class="btn-blog-post"
-                        data-toggle="modal"
-                        data-target="#exampleModalLong"
-                        data-title="Flyers">
-                        <img src="assets/images/portfolio/Flyer.jpg" alt="Flyers" class="nk-img-stretch" />
-                      </button>
-                      <div class="nk-post-category"><p>Flyers</p></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="nk-gap-1"></div>
-              </div>
-            </div>
-          </div>
-          <!-- END: Carousel -->
-        </div>
-        <div class="nk-gap-5"></div>
-      </div>
-      <!-- END: Blog -->
-
-      <!-- START: Contact Info -->
-      <div class="contact">
-        <div class="container pt-80 contact" id="contact">
-          <div class="row vertical-gap">
-            <div class="col-lg-5">
-              <!-- START: Info -->
-              <h2 class="display-4 header">Contact Info</h2>
-              <div class="nk-gap mnt-3"></div>
-
-              <p>
-                "Have a project in mind or need assistance bringing your ideas to life? Feel free to reach
-                out! I'm always open to new opportunities, collaborations, or simply connecting with fellow
-                creatives. Let’s discuss how we can work together to create something exceptional.
-              </p>
-
-              <p>
-                You can contact me through the details provided below - I look forward to hearing from you!"
-              </p>
-
-              <ul class="nk-contact-info">
-                <li>
-                  <strong>Facebook :</strong
-                  ><a
-                    href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
-                    target="_blank"
-                    >Cyan Creations</a
+              <div class="nk-footer-text">
+                <p class="mb-2">
+                  Copyright &copy; 2025
+                  <a href="index.html"><strong>CYAN</strong></a>
+                </p>
+                <p class="mb-0 design-by">
+                  Design by
+                  <a href="https://sparkware-tech.github.io/portfolio/" target="_blank"
+                    ><strong>Sparkware</strong></a
                   >
-                </li>
-                <li>
-                  <strong>Instergram :</strong>
-                  <a href="https://www.instagram.com" target="_blank">Cyan Creations</a>
-                </li>
-                <li><strong>Email :</strong> <a href="mailto:cyan@gmail.com">cyan@gmail.com</a></li>
-                <li>
-                  <strong>WhatsApp No :</strong>
-                  <a href="https://wa.me/+94784953634" target="_blank">+94 495 3634</a>
-                </li>
-              </ul>
-              <!-- END: Info -->
+                </p>
+              </div>
             </div>
-            <div class="col-lg-7">
-              <!-- START: Form -->
-              <form action="#" class="nk-form nk-form-ajax pt-20">
-                <div class="row vertical-gap">
-                  <div class="col-md-6">
-                    <input type="text" class="form-control required" name="name" placeholder="Your Name" />
-                  </div>
-                  <div class="col-md-6">
-                    <input type="email" class="form-control required" name="email" placeholder="Your Email" />
-                  </div>
+          </div>
+        </footer>
+        <!-- END: Footer -->
+      </div>
+
+      <!-- START: Modal -->
+      <div
+        class="modal fade"
+        id="exampleModalLong"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div id="modal-preloader" style="display: none"></div>
+            <div id="all-modal-content" style="display: none">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Container for images -->
+                <div class="row">
+                  <div class="col-6 pl-0 pr-0" id="modalImagesRowOne"></div>
+                  <div class="col-6 pl-0 pr-0" id="modalImagesRowTwo"></div>
                 </div>
-
-                <div class="nk-gap-1"></div>
-                <input type="text" class="form-control required" name="title" placeholder="Your Title" />
-
-                <div class="nk-gap-1"></div>
-                <textarea
-                  class="form-control required"
-                  name="message"
-                  rows="6"
-                  placeholder="Your Comment"
-                  aria-required="true"></textarea>
-                <div class="nk-gap-1"></div>
-                <div class="nk-form-response-success"></div>
-                <div class="nk-form-response-error"></div>
-                <button class="nk-btn">Send Mail</button>
-              </form>
-              <!-- END: Form -->
-            </div>
-          </div>
-          <div class="nk-gap-3"></div>
-        </div>
-      </div>
-
-      <!-- END: Contact Info -->
-
-      <div class="whatsapp-float">
-        <a href="https://wa.me/+94784953634" target="_blank">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
-
-      <!--
-    START: Footer
--->
-      <footer class="nk-footer">
-        <div class="nk-footer-cont">
-          <div class="container text-xs-center">
-            <div class="nk-footer-social">
-              <ul>
-                <li>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
-                    target="_blank"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-
-                <li>
-                  <a href="https://www.instagram.com/unvab/" target="_blank"
-                    ><i class="fa fa-instagram"></i
-                  ></a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="nk-footer-text">
-              <p class="mb-0">
-                &copy; 2025
-                <a href="index.html"><strong>CYAN</strong></a
-                >. All Rights Reserved.
-              </p>
-              <p>
-                Design by
-                <a href="https://sparkware-tech.github.io/portfolio/" target="_blank"
-                  ><strong>Sparkware</strong></a
-                >
-              </p>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
-      <!-- END: Footer -->
-    </div>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModalLong"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLongTitle"
-      aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalTitle">Title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- Container for images -->
-            <div class="row">
-              <div class="col-6 pl-0 pr-0" id="modalImagesRowOne"></div>
-              <div class="col-6 pl-0 pr-0" id="modalImagesRowTwo"></div>
-            </div>
-          </div>
-          <div class="modal-footer"></div>
-        </div>
       </div>
+      <!-- END: Modal -->
     </div>
 
     <!-- START: Scripts -->
-
-    <!-- Bootstrap CSS and JS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script src="assets/js/combined.js"></script>
+
+    <script>
+      window.addEventListener("load", function () {
+        document.body.classList.add("loaded");
+      });
+    </script>
 
     <script>
       $(document).on("hidden.bs.modal", function (e) {
@@ -808,38 +766,39 @@
       // Function to load the appropriate constant file based on category
       async function loadCategoryData(category) {
         let categoryData;
-        try {
-          // Dynamically import the respective constant file based on category
-          if (category === "Flyers") {
-            const module = await import("./constants/flyers.js");
 
-            categoryData = module.flyers;
-          } else if (category === "Tute Covers") {
-            const module = await import("./constants/tute-covers.js");
-            categoryData = module.tuteCovers;
-          } else if (category === "Logoes") {
-            const module = await import("./constants/logoes.js");
-            categoryData = module.logoes;
-          } else if (category === "Baners") {
-            const module = await import("./constants/baners.js");
-            categoryData = module.baners;
-          } else if (category === "Handbills") {
-            const module = await import("./constants/handbills.js");
-            categoryData = module.handbills;
-          }
-        } catch (error) {
-          console.error("Error loading category data:", error);
+        if (category === "Flyers") {
+          const module = await import("./constants/flyers.js");
+          categoryData = module.flyers;
+        } else if (category === "Tute Covers") {
+          const module = await import("./constants/tute-covers.js");
+          categoryData = module.tuteCovers;
+        } else if (category === "Logoes") {
+          const module = await import("./constants/logoes.js");
+          categoryData = module.logoes;
+        } else if (category === "Baners") {
+          const module = await import("./constants/baners.js");
+          categoryData = module.baners;
+        } else if (category === "Handbills") {
+          const module = await import("./constants/handbills.js");
+          categoryData = module.handbills;
         }
+
         return categoryData;
       }
 
       // Listen for button clicks
       document.querySelectorAll(".btn-blog-post").forEach((button) => {
         button.addEventListener("click", async function () {
+          const preloader = document.getElementById("modal-preloader");
+          const allModalContent = document.getElementById("all-modal-content");
+          preloader.style.display = "block";
+          allModalContent.style.display = "none";
+
           // Get the category from the clicked button
           const category = this.getAttribute("data-title");
 
-          // Load the category data (images, title, description) from the constant file
+          // Load the category data from the constant file
           const categoryData = await loadCategoryData(category);
 
           // Populate the modal with the corresponding data
@@ -855,30 +814,51 @@
             // Calculate the midpoint to divide images between two rows
             const midPoint = Math.ceil(categoryData.images.length / 2);
 
+            // Total number of images and counter to track loaded images
+            const totalImages = categoryData.images.length;
+            let loadedImagesCount = 0;
+
+            // Function to check if all images are loaded
+            function checkAllImagesLoaded() {
+              if (loadedImagesCount === totalImages) {
+                preloader.style.display = "none";
+                allModalContent.style.display = "block";
+              }
+            }
+
+            // Function to create and append an image element
+            function appendImage(src, alt, row) {
+              const imgElement = document.createElement("img");
+              imgElement.src = src;
+              imgElement.alt = alt;
+              imgElement.className = "img-fluid p-2";
+              imgElement.style.width = "100%";
+
+              // Increment the counter when the image is loaded
+              imgElement.onload = function () {
+                loadedImagesCount++;
+                checkAllImagesLoaded();
+              };
+
+              // Append the image to the corresponding row
+              row.appendChild(imgElement);
+            }
+
             // Populate the first half of images in the first row
             for (let i = 0; i < midPoint; i++) {
-              const imgElement = document.createElement("img");
-              imgElement.src = categoryData.images[i];
-              imgElement.alt = `Image ${i + 1}`;
-              imgElement.className = "img-fluid p-1"; // Add responsive classes
-              imgElement.style.width = "100%";
-              modalImagesRowOne.appendChild(imgElement);
+              appendImage(categoryData.images[i], `Image ${i + 1}`, modalImagesRowOne);
             }
 
             // Populate the second half of images in the second row
             for (let i = midPoint; i < categoryData.images.length; i++) {
-              const imgElement = document.createElement("img");
-              imgElement.src = categoryData.images[i];
-              imgElement.alt = `Image ${i + 1}`;
-              imgElement.className = "img-fluid p-1 "; // Add responsive classes
-              imgElement.style.width = "100%";
-              modalImagesRowTwo.appendChild(imgElement);
+              appendImage(categoryData.images[i], `Image ${i + 1}`, modalImagesRowTwo);
             }
           }
         });
       });
     </script>
 
+    <script src="assets/js/email.js"></script>
     <!-- END: Scripts -->
   </body>
 </html>
