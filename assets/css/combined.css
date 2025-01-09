@@ -516,6 +516,12 @@ code {
     max-width: 100%;
   }
 }
+@media (min-width: 1750px) {
+  .container {
+    width: 90%;
+    max-width: 100%;
+  }
+}
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
@@ -6350,7 +6356,7 @@ h4 {
   text-decoration: none;
 }
 .nk-contact-info > li + li {
-  margin-top: 5px;
+  margin-top: 0px;
 }
 .nk-contact-info > li > strong {
   color: #171717;
@@ -8036,27 +8042,38 @@ a:hover > .nk-icon-search:after {
     max-width: 100%;
   }
 }
+
 @media (min-width: 768px) {
   .about {
     width: 720px;
     max-width: 100%;
   }
 }
+
 @media (min-width: 992px) {
   .about {
     width: 960px;
     max-width: 100%;
   }
 }
+
 @media (min-width: 1200px) {
   .about {
     width: 1140px;
     max-width: 100%;
   }
 }
+
 @media (min-width: 1530px) {
   .about {
     width: 1350px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1750px) {
+  .about {
+    width: 90%;
     max-width: 100%;
   }
 }
@@ -8273,6 +8290,19 @@ a:hover > .nk-icon-search:after {
   padding: 3px 1px;
 }
 
+@media (max-width: 1024px) {
+  .custom-carousel-item {
+    flex: 0 0 20%;
+    padding: 3px 1px;
+  }
+}
+
+@media (max-width: 640px) {
+  .custom-carousel-item {
+    flex: 0 0 35%;
+    padding: 3px 1px;
+  }
+}
 .custom-carousel-img {
   width: 100%;
   height: auto;
