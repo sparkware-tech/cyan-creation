@@ -14,125 +14,28 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- START: Styles -->
-
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700"
       rel="stylesheet"
       type="text/css" />
-
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet" />
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/combined.css" />
-
-    <style>
-      .modal-dialog {
-        max-width: 95% !important;
-        margin: 0;
-        height: 90vh;
-      }
-
-      .modal-content {
-        height: 100%; /* Set the content to take full height */
-      }
-
-      .modal-title {
-        font-family: sans-serif;
-        font-weight: 600;
-        color: #030241;
-      }
-
-      .modal-body {
-        height: calc(100% - 56px); /* Adjust height considering the header height */
-        overflow-y: auto; /* Add scroll if the content overflows */
-      }
-
-      /* Outer container of the carousel */
-      .custom-carousel-container {
-        width: 100%; /* Make it full width of the parent container */
-        overflow: hidden; /* Hide any overflow from the moving carousel */
-      }
-
-      /* Wrapper around the carousel to handle its width */
-      .custom-carousel-wrapper {
-        display: flex; /* Use flex to arrange items horizontally */
-        width: 100%; /* Full width */
-      }
-
-      .custom-carousel {
-        display: flex;
-        width: calc(400%);
-        animation: scroll 50s linear infinite;
-      }
-
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%); /* Scroll to hide 5 images */
-        }
-      }
-
-      /* Each carousel item */
-      .custom-carousel-item {
-        flex: 0 0 15%; /* Ensures 5 images are visible at once, 100% / 5 = 20% width each */
-        padding: 3px 1px; /* Optional: Add padding to space out images */
-      }
-
-      /* Image inside each carousel item */
-      .custom-carousel-img {
-        width: 100%; /* Ensure image takes up full item width */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure images are cropped if necessary */
-      }
-
-      .whatsapp-float {
-        position: fixed;
-        width: 45px;
-        height: 45px;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366;
-        border-radius: 50%;
-        z-index: 100;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s ease;
-      }
-
-      .whatsapp-float:hover {
-        background-color: #189c48;
-      }
-
-      .whatsapp-float a {
-        font-size: 36px;
-        color: white;
-      }
-
-      .whatsapp-float a:hover {
-        color: white;
-      }
-    </style>
-
-    <!-- END: Styles -->
   </head>
 
   <body>
     <header class="nk-header">
-      <!--
-        START: Navbar
-    -->
-      <nav class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top">
+      <!-- START: Navbar -->
+      <nav
+        class="nk-navbar nk-navbar-top nk-navbar-sticky nk-navbar-transparent nk-navbar-white-text-on-top"
+        aria-label="Main Navigation">
         <div class="container">
           <div class="nk-nav-table">
             <a href="index.html" class="nk-nav-logo">
-              <img src="assets/images/logo_home.png" alt="" class="nk-nav-logo-onscroll" />
-              <img src="assets/images/logo_home_scroll.png" alt="" />
+              <img src="assets/images/logo_home.png" alt="logo_home" class="nk-nav-logo-onscroll" />
+              <img src="assets/images/logo_home_scroll.png" alt="logo_home_scroll" />
             </a>
 
             <ul class="nk-nav nk-nav-right hidden-md-down" data-nav-mobile="#nk-nav-mobile">
@@ -162,65 +65,66 @@
         </div>
       </nav>
       <!-- END: Navbar -->
-    </header>
 
-    <!--
-    START: Navbar Mobile
--->
-    <nav class="nk-navbar nk-navbar-full nk-navbar-align-center" id="nk-nav-mobile">
-      <div class="nk-nav-table">
-        <div class="nk-nav-row">
-          <div class="container">
-            <div class="nk-nav-header">
-              <div class="nk-nav-logo">
-                <a href="index.html" class="nk-nav-logo">
-                  <img src="assets/images/logo_bloom.gif" alt="" />
-                </a>
-              </div>
+      <!-- START: Navbar Mobile -->
+      <nav
+        class="nk-navbar nk-navbar-full nk-navbar-align-center"
+        id="nk-nav-mobile"
+        aria-label="Mobile Navigation">
+        <div class="nk-nav-table">
+          <div class="nk-nav-row">
+            <div class="container">
+              <div class="nk-nav-header">
+                <div class="nk-nav-logo">
+                  <a href="index.html" class="nk-nav-logo">
+                    <img src="assets/images/logo_bloom.gif" alt="logo_bloom" />
+                  </a>
+                </div>
 
-              <div class="nk-nav-close nk-navbar-full-toggle">
-                <span class="nk-icon-close"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nk-nav-row-full nk-nav-row">
-          <div class="nano">
-            <div class="nano-content">
-              <div class="nk-nav-table">
-                <div class="nk-nav-row nk-nav-row-full nk-nav-row-center nk-navbar-mobile-content">
-                  <ul class="nk-nav">
-                    <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
-                  </ul>
+                <div class="nk-nav-close nk-navbar-full-toggle">
+                  <span class="nk-icon-close"></span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="nk-nav-row">
-          <div class="container">
-            <div class="nk-nav-social">
-              <ul>
-                <li>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
-                    target="_blank"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
-                </li>
-              </ul>
+          <div class="nk-nav-row-full nk-nav-row">
+            <div class="nano">
+              <div class="nano-content">
+                <div class="nk-nav-table">
+                  <div class="nk-nav-row nk-nav-row-full nk-nav-row-center nk-navbar-mobile-content">
+                    <ul class="nk-nav">
+                      <!-- Here will be inserted menu from [data-mobile-menu="#nk-nav-mobile"] -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nk-nav-row">
+            <div class="container">
+              <div class="nk-nav-social">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61560314317302&mibextid=YWctOynqrQz5CYpN"
+                      target="_blank"
+                      ><i class="fa fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="" target="_blank"><i class="fa fa-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
-    <!-- END: Navbar Mobile -->
+      </nav>
+      <!-- END: Navbar Mobile -->
+    </header>
 
     <div class="nk-main">
-      <!-- START: Header Title -->
+      <!-- START: Home -->
       <div class="nk-header-title nk-header-title-full">
         <div class="bg-image">
           <div class="bg"></div>
@@ -249,10 +153,9 @@
       </div>
 
       <div id="nk-header-title-scroll-down"></div>
+      <!-- END: Home -->
 
-      <!-- END: Header Title -->
-
-      <!-- START: About Our Agency -->
+      <!-- START: About -->
       <div class="about pt-40" id="about">
         <div class="main-content">
           <div class="content">
@@ -274,10 +177,9 @@
           <div class="profile-image"><img src="assets/images/about.png" alt="about" /></div>
         </div>
       </div>
+      <!-- END: About -->
 
-      <!-- END: About Our Agency -->
-
-      <!-- START: Partners -->
+      <!-- START: Services -->
       <div class="bg-white">
         <div class="custom-carousel-container">
           <div class="custom-carousel-wrapper">
@@ -359,7 +261,7 @@
           </div>
         </div>
       </div>
-      <!-- END: Partners -->
+      <!-- END: Services -->
 
       <!-- START: Features -->
       <div class="nk-box bg-dark-1 text-white">
@@ -633,14 +535,13 @@
         </div>
         <div class="nk-gap-5"></div>
       </div>
-      <!-- END: Blog -->
+      <!-- END: Portfolio -->
 
       <!-- START: Contact Info -->
       <div class="contact">
         <div class="container pt-80 contact" id="contact">
           <div class="row vertical-gap">
             <div class="col-lg-5">
-              <!-- START: Info -->
               <h2 class="display-4 header">Contact Info</h2>
               <div class="nk-gap mnt-3"></div>
 
@@ -673,10 +574,8 @@
                   <a href="https://wa.me/+94784953634" target="_blank">+94 495 3634</a>
                 </li>
               </ul>
-              <!-- END: Info -->
             </div>
             <div class="col-lg-7">
-              <!-- START: Form -->
               <form action="#" class="nk-form nk-form-ajax pt-20">
                 <div class="row vertical-gap">
                   <div class="col-md-6">
@@ -702,24 +601,22 @@
                 <div class="nk-form-response-error"></div>
                 <button class="nk-btn">Send Mail</button>
               </form>
-              <!-- END: Form -->
             </div>
           </div>
           <div class="nk-gap-3"></div>
         </div>
       </div>
-
       <!-- END: Contact Info -->
 
+      <!-- START: Whatsapp -->
       <div class="whatsapp-float">
         <a href="https://wa.me/+94784953634" target="_blank">
           <i class="fab fa-whatsapp"></i>
         </a>
       </div>
+      <!-- START: Whatsapp -->
 
-      <!--
-    START: Footer
--->
+      <!-- START: Footer -->
       <footer class="nk-footer">
         <div class="nk-footer-cont">
           <div class="container text-xs-center">
@@ -760,7 +657,7 @@
       <!-- END: Footer -->
     </div>
 
-    <!-- Modal -->
+    <!-- START: Modal -->
     <div
       class="modal fade"
       id="exampleModalLong"
@@ -787,11 +684,9 @@
         </div>
       </div>
     </div>
+    <!-- END: Modal -->
 
     <!-- START: Scripts -->
-
-    <!-- Bootstrap CSS and JS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -808,28 +703,24 @@
       // Function to load the appropriate constant file based on category
       async function loadCategoryData(category) {
         let categoryData;
-        try {
-          // Dynamically import the respective constant file based on category
-          if (category === "Flyers") {
-            const module = await import("./constants/flyers.js");
 
-            categoryData = module.flyers;
-          } else if (category === "Tute Covers") {
-            const module = await import("./constants/tute-covers.js");
-            categoryData = module.tuteCovers;
-          } else if (category === "Logoes") {
-            const module = await import("./constants/logoes.js");
-            categoryData = module.logoes;
-          } else if (category === "Baners") {
-            const module = await import("./constants/baners.js");
-            categoryData = module.baners;
-          } else if (category === "Handbills") {
-            const module = await import("./constants/handbills.js");
-            categoryData = module.handbills;
-          }
-        } catch (error) {
-          console.error("Error loading category data:", error);
+        if (category === "Flyers") {
+          const module = await import("./constants/flyers.js");
+          categoryData = module.flyers;
+        } else if (category === "Tute Covers") {
+          const module = await import("./constants/tute-covers.js");
+          categoryData = module.tuteCovers;
+        } else if (category === "Logoes") {
+          const module = await import("./constants/logoes.js");
+          categoryData = module.logoes;
+        } else if (category === "Baners") {
+          const module = await import("./constants/baners.js");
+          categoryData = module.baners;
+        } else if (category === "Handbills") {
+          const module = await import("./constants/handbills.js");
+          categoryData = module.handbills;
         }
+
         return categoryData;
       }
 
@@ -839,7 +730,7 @@
           // Get the category from the clicked button
           const category = this.getAttribute("data-title");
 
-          // Load the category data (images, title, description) from the constant file
+          // Load the category data from the constant file
           const categoryData = await loadCategoryData(category);
 
           // Populate the modal with the corresponding data
@@ -860,7 +751,7 @@
               const imgElement = document.createElement("img");
               imgElement.src = categoryData.images[i];
               imgElement.alt = `Image ${i + 1}`;
-              imgElement.className = "img-fluid p-1"; // Add responsive classes
+              imgElement.className = "img-fluid p-1"; 
               imgElement.style.width = "100%";
               modalImagesRowOne.appendChild(imgElement);
             }
@@ -870,7 +761,7 @@
               const imgElement = document.createElement("img");
               imgElement.src = categoryData.images[i];
               imgElement.alt = `Image ${i + 1}`;
-              imgElement.className = "img-fluid p-1 "; // Add responsive classes
+              imgElement.className = "img-fluid p-1 "; 
               imgElement.style.width = "100%";
               modalImagesRowTwo.appendChild(imgElement);
             }
@@ -878,7 +769,6 @@
         });
       });
     </script>
-
     <!-- END: Scripts -->
   </body>
 </html>
