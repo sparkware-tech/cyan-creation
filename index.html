@@ -703,20 +703,22 @@
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalTitle">Title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <!-- Container for images -->
-              <div class="row">
-                <div class="col-6 pl-0 pr-0" id="modalImagesRowOne"></div>
-                <div class="col-6 pl-0 pr-0" id="modalImagesRowTwo"></div>
+            <div id="modal-preloader" style="display: none"></div>
+            <div id="all-modal-content" style="display: none">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Container for images -->
+                <div class="row">
+                  <div class="col-6 pl-0 pr-0" id="modalImagesRowOne"></div>
+                  <div class="col-6 pl-0 pr-0" id="modalImagesRowTwo"></div>
+                </div>
               </div>
             </div>
-            <div class="modal-footer"></div>
           </div>
         </div>
       </div>
@@ -770,6 +772,11 @@
       // Listen for button clicks
       document.querySelectorAll(".btn-blog-post").forEach((button) => {
         button.addEventListener("click", async function () {
+          const preloader = document.getElementById("modal-preloader");
+          const allModalContent = document.getElementById("all-modal-content");
+          preloader.style.display = "block";
+          allModalContent.style.display = "none";
+
           // Get the category from the clicked button
           const category = this.getAttribute("data-title");
 
@@ -789,24 +796,44 @@
             // Calculate the midpoint to divide images between two rows
             const midPoint = Math.ceil(categoryData.images.length / 2);
 
+            // Total number of images and counter to track loaded images
+            const totalImages = categoryData.images.length;
+            let loadedImagesCount = 0;
+
+            // Function to check if all images are loaded
+            function checkAllImagesLoaded() {
+              if (loadedImagesCount === totalImages) {
+                preloader.style.display = "none";
+                allModalContent.style.display = "block";
+              }
+            }
+
+            // Function to create and append an image element
+            function appendImage(src, alt, row) {
+              const imgElement = document.createElement("img");
+              imgElement.src = src;
+              imgElement.alt = alt;
+              imgElement.className = "img-fluid p-2";
+              imgElement.style.width = "100%";
+
+              // Increment the counter when the image is loaded
+              imgElement.onload = function () {
+                loadedImagesCount++;
+                checkAllImagesLoaded();
+              };
+
+              // Append the image to the corresponding row
+              row.appendChild(imgElement);
+            }
+
             // Populate the first half of images in the first row
             for (let i = 0; i < midPoint; i++) {
-              const imgElement = document.createElement("img");
-              imgElement.src = categoryData.images[i];
-              imgElement.alt = `Image ${i + 1}`;
-              imgElement.className = "img-fluid p-1";
-              imgElement.style.width = "100%";
-              modalImagesRowOne.appendChild(imgElement);
+              appendImage(categoryData.images[i], `Image ${i + 1}`, modalImagesRowOne);
             }
 
             // Populate the second half of images in the second row
             for (let i = midPoint; i < categoryData.images.length; i++) {
-              const imgElement = document.createElement("img");
-              imgElement.src = categoryData.images[i];
-              imgElement.alt = `Image ${i + 1}`;
-              imgElement.className = "img-fluid p-1 ";
-              imgElement.style.width = "100%";
-              modalImagesRowTwo.appendChild(imgElement);
+              appendImage(categoryData.images[i], `Image ${i + 1}`, modalImagesRowTwo);
             }
           }
         });
