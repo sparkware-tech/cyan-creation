@@ -52,7 +52,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 code {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 hr {
@@ -2103,105 +2103,6 @@ tbody.collapse.active {
 .navbar-light .navbar-nav .open > .nav-link:hover {
   color: rgba(0, 0, 0, 0.9);
 }
-.carousel-control:focus,
-.carousel-control:hover {
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-  opacity: 0.9;
-}
-.carousel-control .icon-next,
-.carousel-control .icon-prev {
-  position: absolute;
-  top: 50%;
-  z-index: 5;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  font-family: serif;
-  line-height: 1;
-}
-.carousel-control .icon-prev {
-  left: 50%;
-  margin-left: -10px;
-}
-.carousel-control .icon-next {
-  right: 50%;
-  margin-right: -10px;
-}
-.carousel-control .icon-prev:before {
-  content: "\2039";
-}
-.carousel-control .icon-next:before {
-  content: "\203a";
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  padding-left: 0;
-  margin-left: -30%;
-  text-align: center;
-  list-style: none;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 10px;
-}
-.carousel-indicators .active {
-  width: 12px;
-  height: 12px;
-  margin: 0;
-  background-color: #fff;
-}
-.carousel-caption {
-  position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-}
-.carousel-caption .btn {
-  text-shadow: none;
-}
-@media (min-width: 576px) {
-  .carousel-control .icon-next,
-  .carousel-control .icon-prev {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    font-size: 30px;
-  }
-  .carousel-control .icon-prev {
-    margin-left: -15px;
-  }
-  .carousel-control .icon-next {
-    margin-right: -15px;
-  }
-  .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
-  }
-  .carousel-indicators {
-    bottom: 20px;
-  }
-}
 .align-top {
   vertical-align: top !important;
 }
@@ -3272,13 +3173,6 @@ a.text-gray-dark:focus,
 a.text-gray-dark:hover {
   color: #1f2021 !important;
 }
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
 .hidden-xs-up {
   display: none !important;
 }
@@ -3357,7 +3251,6 @@ a.text-gray-dark:hover {
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: FontAwesome;
   src: url(../fonts/fontawesome-webfont.eot?v=4.7.0);
@@ -3369,14 +3262,22 @@ a.text-gray-dark:hover {
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: "FontTagLine";
   src: url("../fonts/Tw.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: Pe-icon-7-stroke;
+  src: url(../fonts/Pe-icon-7-stroke.eot?d7yf1v);
+  src: url(../fonts/Pe-icon-7-stroke.eot?#iefixd7yf1v) format("embedded-opentype"),
+    url(../fonts/Pe-icon-7-stroke.woff?d7yf1v) format("woff"),
+    url(../fonts/Pe-icon-7-stroke.ttf?d7yf1v) format("truetype"),
+    url(../fonts/Pe-icon-7-stroke.svg?d7yf1v#Pe-icon-7-stroke) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -3930,16 +3831,6 @@ a.text-gray-dark:hover {
 .pe-li {
   text-align: center;
 }
-@font-face {
-  font-family: Pe-icon-7-stroke;
-  src: url(../fonts/Pe-icon-7-stroke.eot?d7yf1v);
-  src: url(../fonts/Pe-icon-7-stroke.eot?#iefixd7yf1v) format("embedded-opentype"),
-    url(../fonts/Pe-icon-7-stroke.woff?d7yf1v) format("woff"),
-    url(../fonts/Pe-icon-7-stroke.ttf?d7yf1v) format("truetype"),
-    url(../fonts/Pe-icon-7-stroke.svg?d7yf1v#Pe-icon-7-stroke) format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
 [class*=" pe-7s-"],
 [class^="pe-7s-"] {
   display: inline-block;
@@ -4358,9 +4249,6 @@ a.text-gray-dark:hover {
 }
 html {
   overflow-y: scroll;
-}
-body {
-  color: #5f5f5f;
 }
 .nk-main,
 body {
@@ -8224,6 +8112,7 @@ a:hover > .nk-icon-search:after {
   }
 }
 
+/* Modal popup*/
 .modal-dialog {
   max-width: 95% !important;
   margin: 0;
@@ -8231,7 +8120,7 @@ a:hover > .nk-icon-search:after {
 }
 
 .modal-content {
-  height: 100%; /* Set the content to take full height */
+  height: 100%; 
 }
 
 .modal-title {
@@ -8241,20 +8130,19 @@ a:hover > .nk-icon-search:after {
 }
 
 .modal-body {
-  height: calc(100% - 56px); /* Adjust height considering the header height */
-  overflow-y: auto; /* Add scroll if the content overflows */
+  height: calc(100% - 56px);
+  overflow-y: auto; 
 }
 
-/* Outer container of the carousel */
+/* Carousel */
 .custom-carousel-container {
-  width: 100%; /* Make it full width of the parent container */
-  overflow: hidden; /* Hide any overflow from the moving carousel */
+  width: 100%;
+  overflow: hidden; 
 }
 
-/* Wrapper around the carousel to handle its width */
 .custom-carousel-wrapper {
-  display: flex; /* Use flex to arrange items horizontally */
-  width: 100%; /* Full width */
+  display: flex; 
+  width: 100%;
 }
 
 .custom-carousel {
@@ -8268,23 +8156,22 @@ a:hover > .nk-icon-search:after {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* Scroll to hide 5 images */
+    transform: translateX(-100%); 
   }
 }
 
-/* Each carousel item */
 .custom-carousel-item {
-  flex: 0 0 15%; /* Ensures 5 images are visible at once, 100% / 5 = 20% width each */
-  padding: 3px 1px; /* Optional: Add padding to space out images */
+  flex: 0 0 15%;
+  padding: 3px 1px; 
 }
 
-/* Image inside each carousel item */
 .custom-carousel-img {
-  width: 100%; /* Ensure image takes up full item width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure images are cropped if necessary */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
 }
 
+/* Whatsapp button */
 .whatsapp-float {
   position: fixed;
   width: 45px;
@@ -8313,13 +8200,13 @@ a:hover > .nk-icon-search:after {
   color: white;
 }
 
-/* Style for preloader */
+/* Preloader */
 #preloader {
   position: fixed;
   inset: 0;
   z-index: 9999;
   overflow: hidden;
-  background-color: #e8e8e8;
+  background-color: #fff;
   transition: all 0.6s ease-out;
   width: 100%;
   height: 100vh;
