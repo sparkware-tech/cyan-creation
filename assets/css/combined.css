@@ -510,6 +510,12 @@ code {
     max-width: 100%;
   }
 }
+@media (min-width: 1530px) {
+  .container {
+    width: 1350px;
+    max-width: 100%;
+  }
+}
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
@@ -6035,7 +6041,7 @@ h4 {
   padding-bottom: 2px;
 }
 .nk-footer .nk-footer-social {
-  padding-bottom: 12px;
+  padding-bottom: 0px;
   color: #171717;
 }
 .nk-footer .nk-footer-social > ul {
@@ -6068,6 +6074,11 @@ h4 {
   font-size: 0.95rem;
 }
 .nk-footer .nk-footer-text p {
+  font-weight: 500;
+  color: #030241;
+}
+.nk-footer .nk-footer-text .design-by {
+  font-size: 11px;
   color: #030241;
 }
 .nk-footer .nk-footer-text a {
@@ -8012,9 +8023,46 @@ a:hover > .nk-icon-search:after {
   color: #54c3c3;
 }
 
-.about {
+/*About*/
+.about-content {
   height: auto;
   background: linear-gradient(135deg, #e3e2e2, #ffffff);
+}
+
+@media (min-width: 576px) {
+  .about {
+    width: 540px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .about {
+    width: 720px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .about {
+    width: 960px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .about {
+    width: 1140px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1530px) {
+  .about {
+    width: 1350px;
+    max-width: 100%;
+  }
+}
+
+.about {
+  height: auto;
+  margin: auto;
 }
 
 .about .main-content {
@@ -8025,7 +8073,6 @@ a:hover > .nk-icon-search:after {
 
 .about .main-content .content {
   width: 50%;
-  padding-left: 40px;
 }
 
 .about .main-content .content .title {
@@ -8314,4 +8361,3 @@ body.loading #preloader {
 body.loaded #preloader {
   display: none;
 }
-
