@@ -8225,90 +8225,135 @@ a:hover > .nk-icon-search:after {
 }
 
 .modal-dialog {
-        max-width: 95% !important;
-        margin: 0;
-        height: 90vh;
-      }
+  max-width: 95% !important;
+  margin: 0;
+  height: 90vh;
+}
 
-      .modal-content {
-        height: 100%; /* Set the content to take full height */
-      }
+.modal-content {
+  height: 100%; /* Set the content to take full height */
+}
 
-      .modal-title {
-        font-family: sans-serif;
-        font-weight: 600;
-        color: #030241;
-      }
+.modal-title {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: #030241;
+}
 
-      .modal-body {
-        height: calc(100% - 56px); /* Adjust height considering the header height */
-        overflow-y: auto; /* Add scroll if the content overflows */
-      }
+.modal-body {
+  height: calc(100% - 56px); /* Adjust height considering the header height */
+  overflow-y: auto; /* Add scroll if the content overflows */
+}
 
-      /* Outer container of the carousel */
-      .custom-carousel-container {
-        width: 100%; /* Make it full width of the parent container */
-        overflow: hidden; /* Hide any overflow from the moving carousel */
-      }
+/* Outer container of the carousel */
+.custom-carousel-container {
+  width: 100%; /* Make it full width of the parent container */
+  overflow: hidden; /* Hide any overflow from the moving carousel */
+}
 
-      /* Wrapper around the carousel to handle its width */
-      .custom-carousel-wrapper {
-        display: flex; /* Use flex to arrange items horizontally */
-        width: 100%; /* Full width */
-      }
+/* Wrapper around the carousel to handle its width */
+.custom-carousel-wrapper {
+  display: flex; /* Use flex to arrange items horizontally */
+  width: 100%; /* Full width */
+}
 
-      .custom-carousel {
-        display: flex;
-        width: calc(400%);
-        animation: scroll 50s linear infinite;
-      }
+.custom-carousel {
+  display: flex;
+  width: calc(400%);
+  animation: scroll 50s linear infinite;
+}
 
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%); /* Scroll to hide 5 images */
-        }
-      }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll to hide 5 images */
+  }
+}
 
-      /* Each carousel item */
-      .custom-carousel-item {
-        flex: 0 0 15%; /* Ensures 5 images are visible at once, 100% / 5 = 20% width each */
-        padding: 3px 1px; /* Optional: Add padding to space out images */
-      }
+/* Each carousel item */
+.custom-carousel-item {
+  flex: 0 0 15%; /* Ensures 5 images are visible at once, 100% / 5 = 20% width each */
+  padding: 3px 1px; /* Optional: Add padding to space out images */
+}
 
-      /* Image inside each carousel item */
-      .custom-carousel-img {
-        width: 100%; /* Ensure image takes up full item width */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure images are cropped if necessary */
-      }
+/* Image inside each carousel item */
+.custom-carousel-img {
+  width: 100%; /* Ensure image takes up full item width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images are cropped if necessary */
+}
 
-      .whatsapp-float {
-        position: fixed;
-        width: 45px;
-        height: 45px;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366;
-        border-radius: 50%;
-        z-index: 100;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s ease;
-      }
+.whatsapp-float {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
 
-      .whatsapp-float:hover {
-        background-color: #189c48;
-      }
+.whatsapp-float:hover {
+  background-color: #189c48;
+}
 
-      .whatsapp-float a {
-        font-size: 36px;
-        color: white;
-      }
+.whatsapp-float a {
+  font-size: 36px;
+  color: white;
+}
 
-      .whatsapp-float a:hover {
-        color: white;
-      }
+.whatsapp-float a:hover {
+  color: white;
+}
+
+/* Style for preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide content while loading */
+body.loading #content {
+  display: none;
+}
+
+body.loading #preloader {
+  display: flex;
+}
+
+body.loaded #preloader {
+  display: none;
+}
