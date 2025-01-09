@@ -21,7 +21,7 @@
 
       // Send email via EmailJS
       emailjs
-        .send("service_jlhkf8u", "template_vn62dge", formParams) // Service ID and Template ID
+        .send("service_pz60mng", "template_akvh1t2", formParams) // Service ID and Template ID
         .then(
           function (response) {
             document.querySelector(".sent-message").style.display = "block";
