@@ -8292,6 +8292,7 @@ a:hover > .nk-icon-search:after {
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .whatsapp-float:hover {
@@ -8299,9 +8300,12 @@ a:hover > .nk-icon-search:after {
 }
 
 .whatsapp-float a {
-  font-size: 36px;
+  font-size: 32px;
   color: #fff;
+  padding-top: 4px;
+  padding-left: 0.2px;
 }
+
 
 .whatsapp-float a:hover {
   color: #fff;
