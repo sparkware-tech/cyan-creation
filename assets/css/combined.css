@@ -8117,10 +8117,22 @@ a:hover > .nk-icon-search:after {
   max-width: 95% !important;
   margin: 0;
   height: 90vh;
+  padding-left: 70px;
+  padding-top: 60px;
+}
+
+@media (max-width: 640px) {
+  .modal-dialog {
+    max-width: 100% !important;
+    margin: 0;
+    height: 100vh;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
 }
 
 .modal-content {
-  height: 100%; 
+  height: 100%;
 }
 
 .modal-title {
@@ -8131,17 +8143,17 @@ a:hover > .nk-icon-search:after {
 
 .modal-body {
   height: calc(100% - 56px);
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 /* Carousel */
 .custom-carousel-container {
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .custom-carousel-wrapper {
-  display: flex; 
+  display: flex;
   width: 100%;
 }
 
@@ -8156,19 +8168,19 @@ a:hover > .nk-icon-search:after {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); 
+    transform: translateX(-100%);
   }
 }
 
 .custom-carousel-item {
   flex: 0 0 15%;
-  padding: 3px 1px; 
+  padding: 3px 1px;
 }
 
 .custom-carousel-img {
-  width: 100%; 
-  height: auto; 
-  object-fit: cover; 
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Whatsapp button */
