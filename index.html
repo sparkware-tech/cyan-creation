@@ -534,6 +534,27 @@
                             class="btn-blog-post"
                             data-toggle="modal"
                             data-target="#exampleModalLong"
+                            data-title="Products">
+                            <img src="assets/images/portfolio/Product.jpg" alt="" class="nk-img-stretch" />
+                          </button>
+                          <div class="nk-post-category"><p>Product</p></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nk-gap-1"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div>
+                    <div class="pl-15 pr-15">
+                      <div class="nk-blog-post">
+                        <div class="nk-post-thumb">
+                          <button
+                            type="button"
+                            class="btn-blog-post"
+                            data-toggle="modal"
+                            data-target="#exampleModalLong"
                             data-title="Handbills">
                             <img src="assets/images/portfolio/Handbill.jpg" alt="" class="nk-img-stretch" />
                           </button>
@@ -778,6 +799,9 @@
         } else if (category === "Handbills") {
           const module = await import("./constants/handbills.js");
           categoryData = module.handbills;
+        }else if (category === "Products") {
+          const module = await import("./constants/products.js");
+          categoryData = module.products;
         }
 
         return categoryData;
