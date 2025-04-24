@@ -584,6 +584,28 @@
                   </div>
                   <div class="nk-gap-1"></div>
                 </div>
+
+                <div>
+                  <div class="pl-15 pr-15">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <button
+                          type="button"
+                          class="btn-blog-post"
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          data-title="Cards">
+                          <img
+                            src="assets/images/portfolio/Card design.jpg"
+                            alt="Cards"
+                            class="nk-img-stretch" />
+                        </button>
+                        <div class="nk-post-category"><p>Cards</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
               </div>
             </div>
             <!-- END: Carousel -->
@@ -799,9 +821,12 @@
         } else if (category === "Handbills") {
           const module = await import("./constants/handbills.js");
           categoryData = module.handbills;
-        }else if (category === "Products") {
+        } else if (category === "Products") {
           const module = await import("./constants/products.js");
           categoryData = module.products;
+        } else if (category === "Cards") {
+          const module = await import("./constants/cards.js");
+          categoryData = module.cards;
         }
 
         return categoryData;
