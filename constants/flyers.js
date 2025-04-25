@@ -6,7 +6,6 @@ export const flyers = {
     "assets/images/portfolio/flyer/awrudu 2.jpg",
     "assets/images/portfolio/flyer/Christmas.jpg",
     "assets/images/portfolio/flyer/dr chem Post Preview.jpg",
-    "assets/images/portfolio/flyer/dr chem Post Preview.jpg",
     "assets/images/portfolio/flyer/DS Post Preview.jpg",
     "assets/images/portfolio/flyer/fos 1.jpg",
     "assets/images/portfolio/flyer/Fos 2.jpg",
