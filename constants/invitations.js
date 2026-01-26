@@ -6,5 +6,6 @@ export const invitations = {
     "assets/images/portfolio/invitation/3-min.jpg",
     "assets/images/portfolio/invitation/4-min.jpg",
     "assets/images/portfolio/invitation/5-min.jpg",
+    "assets/images/portfolio/invitation/6.jpeg",
   ],
 };
