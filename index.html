@@ -676,7 +676,7 @@
                   <div class="nk-gap-1"></div>
                 </div>
 
-                <div>
+                <!-- <div>
                   <div class="pl-15 pr-15">
                     <div class="nk-blog-post">
                       <div class="nk-post-thumb">
@@ -696,7 +696,7 @@
                     </div>
                   </div>
                   <div class="nk-gap-1"></div>
-                </div>
+                </div> -->
 
                 <div>
                   <div class="pl-15 pr-15">
@@ -946,13 +946,15 @@
         }else if (category === "Apperal") {
           const module = await import("./constants/apperal.js");
           categoryData = module.apperal;
-        }else if (category === "Flyer Series") {
-          const module = await import("./constants/flyer-series.js");
-          categoryData = module.flyerSeries;
         }else if (category === "Trifold Broucher") {
           const module = await import("./constants/trifold-broucher.js");
           categoryData = module.trifoldBroucher;
         }
+        
+        // else if (category === "Flyer Series") {
+        //   const module = await import("./constants/flyer-series.js");
+        //   categoryData = module.flyerSeries;
+        // }
 
         return categoryData;
       }
