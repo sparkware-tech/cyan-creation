@@ -943,6 +943,15 @@
         }else if (category === "Invitation") {
           const module = await import("./constants/invitations.js");
           categoryData = module.invitations;
+        }else if (category === "Apperal") {
+          const module = await import("./constants/apperal.js");
+          categoryData = module.apperal;
+        }else if (category === "Flyer Series") {
+          const module = await import("./constants/flyer-series.js");
+          categoryData = module.flyerSeries;
+        }else if (category === "Trifold Broucher") {
+          const module = await import("./constants/trifold-broucher.js");
+          categoryData = module.trifoldBroucher;
         }
 
         return categoryData;
