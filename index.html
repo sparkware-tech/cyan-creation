@@ -653,6 +653,72 @@
                   </div>
                   <div class="nk-gap-1"></div>
                 </div>
+
+                <div>
+                  <div class="pl-15 pr-15">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <button
+                          type="button"
+                          class="btn-blog-post"
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          data-title="Apperal">
+                          <img
+                            src="assets/images/portfolio/Apparel Design.jpg"
+                            alt="Apperal"
+                            class="nk-img-stretch" />
+                        </button>
+                        <div class="nk-post-category"><p>Apperal</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
+
+                <!-- <div>
+                  <div class="pl-15 pr-15">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <button
+                          type="button"
+                          class="btn-blog-post"
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          data-title="Flyer Series">
+                          <img
+                            src="assets/images/portfolio/Flyer series.jpg"
+                            alt="Flyer Series"
+                            class="nk-img-stretch" />
+                        </button>
+                        <div class="nk-post-category"><p>Flyer Series</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div> -->
+
+                <div>
+                  <div class="pl-15 pr-15">
+                    <div class="nk-blog-post">
+                      <div class="nk-post-thumb">
+                        <button
+                          type="button"
+                          class="btn-blog-post"
+                          data-toggle="modal"
+                          data-target="#exampleModalLong"
+                          data-title="Trifold Broucher">
+                          <img
+                            src="assets/images/portfolio/Trifold Brochure.jpg"
+                            alt="Trifold Broucher"
+                            class="nk-img-stretch" />
+                        </button>
+                        <div class="nk-post-category"><p>Trifold Broucher</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nk-gap-1"></div>
+                </div>
               </div>
             </div>
             <!-- END: Carousel -->
@@ -877,7 +943,18 @@
         }else if (category === "Invitation") {
           const module = await import("./constants/invitations.js");
           categoryData = module.invitations;
+        }else if (category === "Apperal") {
+          const module = await import("./constants/apperal.js");
+          categoryData = module.apperal;
+        }else if (category === "Trifold Broucher") {
+          const module = await import("./constants/trifold-broucher.js");
+          categoryData = module.trifoldBroucher;
         }
+        
+        // else if (category === "Flyer Series") {
+        //   const module = await import("./constants/flyer-series.js");
+        //   categoryData = module.flyerSeries;
+        // }
 
         return categoryData;
       }
